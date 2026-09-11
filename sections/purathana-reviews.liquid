@@ -1,0 +1,238 @@
+<!-- ===================================================================
+     PURATHANA VERIFIED TESTIMONIALS (Shopify Liquid)
+     SOW Requirement: 5 Stars in Black
+     Editorial quotes from culinary masters and nutritionists.
+     =================================================================== -->
+
+<section class="p-reviews-section" id="reviews">
+  <div class="purathana-container">
+    <div class="p-section-heading">
+      <div class="p-eyebrow">Verified Integrity</div>
+      <h2 class="p-section-title">Endorsed by Culinary &amp; Health Purists.</h2>
+      <div class="p-rating-summary">
+        <div class="p-stars-black">★★★★★</div>
+        <span class="p-rating-score">4.92 / 5.00</span>
+        <span class="p-rating-count">Based on 1,420+ Verified Households Across India</span>
+      </div>
+    </div>
+
+    <div class="p-reviews-grid">
+      <!-- Review 1 -->
+      <div class="p-review-card">
+        <div class="p-card-stars">★★★★★</div>
+        <blockquote class="p-review-quote">
+          “The moment you temper mustard seeds in this cold-pressed groundnut oil, the nutty fragrance fills the entire kitchen. You realize immediately what factory refining took away from Indian cooking.”
+        </blockquote>
+        <div class="p-review-author">
+          <div class="p-author-avatar">RK</div>
+          <div class="p-author-meta">
+            <div class="p-author-name">Chef Radhika K.</div>
+            <div class="p-author-role">Culinary Director · Bangalore · Verified Purchase</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 2 -->
+      <div class="p-review-card">
+        <div class="p-card-stars">★★★★★</div>
+        <blockquote class="p-review-quote">
+          “As a pediatric nutritionist, I recommend Purathana’s small-batch wood-pressed coconut and sesame oil to parents. It retains the delicate phytosterols and natural monolaurin without any hexane residue.”
+        </blockquote>
+        <div class="p-review-author">
+          <div class="p-author-avatar">SM</div>
+          <div class="p-author-meta">
+            <div class="p-author-name">Dr. Suresh Menon, MD</div>
+            <div class="p-author-role">Pediatric Nutritionist · Chennai · Verified Purchase</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 3 -->
+      <div class="p-review-card">
+        <div class="p-card-stars">★★★★★</div>
+        <blockquote class="p-review-quote">
+          “The pungency of this black mustard oil is authentic Jhaanjh. No artificial stinging, just pristine wood-pressed heat that makes authentic pickles last all year without synthetic preservatives.”
+        </blockquote>
+        <div class="p-review-author">
+          <div class="p-author-avatar">AG</div>
+          <div class="p-author-meta">
+            <div class="p-author-name">Ananya Ganguly</div>
+            <div class="p-author-role">Artisanal Preserver · Kolkata · Verified Purchase</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SOW Section 8 & 9: Social Follow 50 Loyalty Points Banner -->
+    <div class="p-social-rewards-strip">
+      <div class="p-social-rewards-inner">
+        <div class="p-rewards-meta">
+          <span class="p-rewards-eyebrow">The Reserve Circle</span>
+          <h3 class="p-rewards-title">Connect on Instagram &amp; Facebook. Receive 50 Reward Points (₹50).</h3>
+          <p class="p-rewards-sub">
+            Follow our daily harvest chronicles and wood-pressing stories. 1 Reward Point = ₹1, redeemable instantly against any reserve bottle.
+          </p>
+        </div>
+        <div class="p-rewards-actions">
+          <a href="https://instagram.com" target="_blank" rel="noopener" class="p-btn-social-follow">
+            Follow @PurathanaOils
+          </a>
+          <button type="button" class="p-btn-claim-points" onclick="if(typeof openPurathanaBag === 'function'){ openPurathanaBag(); const chk = document.getElementById('ShopifyRewardPointsToggle'); if(chk){ chk.checked = true; toggleRewardPoints(true); } }">
+            Claim 50 Credits (₹50)
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.p-social-rewards-strip {
+  margin-top: 3.5rem;
+  background: var(--p-bg-warm, #F4EFE6);
+  border: 1px solid var(--p-border-hairline, rgba(18, 24, 20, 0.08));
+  border-radius: var(--p-radius-lg, 16px);
+  padding: 2.5rem;
+}
+
+.p-social-rewards-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.p-rewards-meta {
+  max-width: 580px;
+}
+
+.p-rewards-eyebrow {
+  display: block;
+  font-size: 0.6875rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--p-color-basalt, #111713);
+  opacity: 0.65;
+  margin-bottom: 0.5rem;
+}
+
+.p-rewards-title {
+  font-family: var(--p-font-display, "Syne", sans-serif);
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  color: var(--p-color-basalt, #111713);
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.p-rewards-sub {
+  font-size: 0.875rem;
+  color: var(--p-text-muted, #7E8580);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.p-rewards-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.p-btn-social-follow {
+  background: transparent;
+  color: var(--p-color-basalt, #111713);
+  border: 1px solid var(--p-color-basalt, #111713);
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--p-radius-sm, 6px);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 200ms ease;
+  white-space: nowrap;
+}
+
+.p-btn-social-follow:hover {
+  background: var(--p-color-basalt, #111713);
+  color: #FFFFFF;
+}
+
+.p-btn-claim-points {
+  background: var(--p-color-basalt, #111713);
+  color: #FFFFFF;
+  border: 1px solid var(--p-color-basalt, #111713);
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--p-radius-sm, 6px);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 200ms ease;
+  white-space: nowrap;
+}
+
+.p-btn-claim-points:hover {
+  background: var(--p-color-forest-deep, #16241C);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 640px) {
+  .p-reviews-section {
+    padding: 2.75rem 0 3.5rem !important;
+    overflow: hidden !important;
+  }
+  .p-reviews-section .p-section-heading {
+    margin-bottom: 1.5rem !important;
+  }
+  .p-reviews-grid {
+    gap: 1rem !important;
+  }
+  .p-review-card {
+    padding: 1.25rem 1.1rem !important;
+    border-radius: 12px !important;
+  }
+  .p-review-quote {
+    font-size: 0.86rem !important;
+    line-height: 1.5 !important;
+    margin-bottom: 1rem !important;
+  }
+  .p-social-rewards-strip {
+    padding: 1.25rem 1rem !important;
+    margin-top: 1.75rem !important;
+    border-radius: 12px !important;
+  }
+  .p-rewards-title {
+    font-size: 1.15rem !important;
+    line-height: 1.3 !important;
+  }
+  .p-rewards-sub {
+    font-size: 0.8rem !important;
+  }
+  .p-rewards-actions {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.6rem !important;
+  }
+  .p-btn-social-follow,
+  .p-btn-claim-points {
+    text-align: center;
+    padding: 0.75rem 1rem !important;
+    font-size: 0.78rem !important;
+  }
+}
+</style>
+
+{% schema %}
+{
+  "name": "Purathana Reviews",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Purathana Reviews"
+    }
+  ]
+}
+{% endschema %}

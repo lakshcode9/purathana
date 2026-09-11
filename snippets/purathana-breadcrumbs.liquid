@@ -1,0 +1,106 @@
+<!-- ===================================================================
+     PURATHANA BREADCRUMB NAVIGATION (SOW Requirement)
+     Apple-style architectural breadcrumb strip with schema.org metadata
+     =================================================================== -->
+
+{% unless template == 'index' or template == 'cart' or template == '404' %}
+  <nav class="p-breadcrumbs" aria-label="Breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+    <div class="purathana-container">
+      <ol class="p-breadcrumbs-list">
+        <li class="p-breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/" itemprop="item" class="p-breadcrumb-link">
+            <span itemprop="name">Home</span>
+          </a>
+          <meta itemprop="position" content="1" />
+          <span class="p-breadcrumb-sep">/</span>
+        </li>
+
+        {% if template contains 'product' %}
+          <li class="p-breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a href="/collections/all" itemprop="item" class="p-breadcrumb-link">
+              <span itemprop="name">The Reserve</span>
+            </a>
+            <meta itemprop="position" content="2" />
+            <span class="p-breadcrumb-sep">/</span>
+          </li>
+          <li class="p-breadcrumb-item active" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" aria-current="page">
+            <span itemprop="name">{{ product.title }}</span>
+            <meta itemprop="position" content="3" />
+          </li>
+
+        {% elsif template contains 'collection' and collection.handle %}
+          <li class="p-breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a href="/collections/all" itemprop="item" class="p-breadcrumb-link">
+              <span itemprop="name">Collections</span>
+            </a>
+            <meta itemprop="position" content="2" />
+            <span class="p-breadcrumb-sep">/</span>
+          </li>
+          <li class="p-breadcrumb-item active" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" aria-current="page">
+            <span itemprop="name">{{ collection.title }}</span>
+            <meta itemprop="position" content="3" />
+          </li>
+
+        {% elsif template contains 'page' %}
+          <li class="p-breadcrumb-item active" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" aria-current="page">
+            <span itemprop="name">{{ page.title }}</span>
+            <meta itemprop="position" content="2" />
+          </li>
+
+        {% else %}
+          <li class="p-breadcrumb-item active" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" aria-current="page">
+            <span itemprop="name">{{ page_title }}</span>
+            <meta itemprop="position" content="2" />
+          </li>
+        {% endif %}
+      </ol>
+    </div>
+  </nav>
+
+  <style>
+  .p-breadcrumbs {
+    padding: 1.25rem 0;
+    background: var(--p-bg-canvas, #FBF9F5);
+    border-bottom: 1px solid var(--p-border-hairline, rgba(18, 24, 20, 0.08));
+    font-family: var(--p-font-sans, -apple-system, sans-serif);
+  }
+
+  .p-breadcrumbs-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+  }
+
+  .p-breadcrumb-item {
+    display: inline-flex;
+    align-items: center;
+    color: var(--p-text-muted, #7E8580);
+  }
+
+  .p-breadcrumb-link {
+    color: var(--p-text-muted, #7E8580);
+    text-decoration: none;
+    transition: color 150ms ease;
+  }
+
+  .p-breadcrumb-link:hover {
+    color: var(--p-color-basalt, #111713);
+  }
+
+  .p-breadcrumb-sep {
+    margin-inline: 0.6rem;
+    color: var(--p-border-medium, rgba(18, 24, 20, 0.14));
+    font-size: 0.7rem;
+  }
+
+  .p-breadcrumb-item.active {
+    color: var(--p-color-basalt, #111713);
+    font-weight: 600;
+  }
+  </style>
+{% endunless %}

@@ -1,0 +1,102 @@
+/* ===================================================================
+   PURATHANA - TRADITIONAL HERITAGE LUXURY DESIGN SYSTEM
+   Palette Specified:
+     Background: #F4E8D2 (Warm Ivory / Cream)
+     Brand / Headings: #5A1F22 (Deep Burgundy)
+     Buttons: #7A2E25 (Earthy Red-Brown)
+     Text: #2F2923 (Dark Espresso)
+     Secondary Accent: #7A8060 (Muted Olive Green)
+     Small Highlights: #C88732 (Antique Gold)
+   Typography: Classical Marcellus + Plus Jakarta Sans + Italiana
+   Anti-Dropship: Traditional • Natural • Premium • Indian • Trustworthy
+   Batch Philosophy: Small Batch Milling · Zero Old Stock Kept
+   =================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Italiana&family=Marcellus&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Canvas Environment (Warm Linen / Parchment from Reference UI) */
+  --p-bg-canvas: #FAF5EB;
+  --p-bg-surface: #FFFFFF;
+  --p-bg-warm: #F2EBE0;
+  --p-bg-card: #F7F1E5;
+  --p-bg-dark: #233A27;
+  --p-bg-dark-card: #1B2E1E;
+  --p-bg-subtle: rgba(35, 58, 39, 0.05);
+
+  /* Primary Brand: Deep Vedic Forest Green (Reference UI) */
+  --p-color-burgundy: #28422D;
+  --p-color-burgundy-light: #36593D;
+  --p-color-burgundy-tint: rgba(40, 66, 45, 0.08);
+
+  /* Action Buttons: Forest Green & Terracotta */
+  --p-color-btn: #28422D;
+  --p-color-btn-hover: #1C3020;
+  --p-color-btn-active: #152418;
+
+  /* Typography Inks: Deep Charcoal & Dark Espresso */
+  --p-color-espresso: #24221E;
+  --p-color-basalt: #24221E;
+  --p-text-headline: #24221E;
+  --p-text-body: #4A463F;
+  --p-text-muted: rgba(36, 34, 30, 0.65);
+  --p-text-inverse: #FAF5EB;
+
+  /* Botanical Pastels for Oil Cards */
+  --p-card-groundnut: #F2E7D3;
+  --p-card-mustard: #EDE2C8;
+  --p-card-coconut: #E5EDE5;
+  --p-card-sesame: #E5DEE8;
+  --p-card-sunflower: #F3E8CE;
+
+  /* Secondary Accent: Muted Olive Green & Sage */
+  --p-color-olive: #5C6E52;
+  --p-color-olive-dark: #46553E;
+  --p-color-olive-tint: rgba(92, 110, 82, 0.12);
+
+  /* Warm Gold / Ochre Accent (Reference Stars & Golden Drops) */
+  --p-color-gold: #C88E35;
+  --p-color-gold-light: #DE9F42;
+  --p-color-gold-tint: rgba(200, 142, 53, 0.12);
+  --p-color-gold-glow: rgba(200, 142, 53, 0.28);
+  --p-color-saffron: #C88E35;
+  --p-color-brass: #C88E35;
+
+  /* Architectural Hairlines */
+  --p-border-hairline: rgba(47, 41, 35, 0.12);
+  --p-border-medium: rgba(90, 31, 34, 0.22);
+  --p-border-gold: rgba(200, 135, 50, 0.40);
+  --p-border-inverse: rgba(244, 232, 210, 0.2);
+
+  /* Classical Heritage Typography */
+  --p-font-display: 'Marcellus', Georgia, serif;
+  --p-font-heading: 'Marcellus', Georgia, serif;
+  --p-font-seal: 'Marcellus', Georgia, serif;
+  --p-font-serif: 'Italiana', Georgia, serif;
+  --p-font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Contemporary Warm Shadows */
+  --p-shadow-ambient: 0 4px 20px -2px rgba(47, 41, 35, 0.06);
+  --p-shadow-elevated: 0 16px 36px -6px rgba(90, 31, 34, 0.10);
+  --p-shadow-hero: 0 24px 50px -10px rgba(90, 31, 34, 0.14);
+  --p-shadow-drawer: -20px 0 50px rgba(47, 41, 35, 0.25);
+  --p-shadow-gold: 0 8px 24px rgba(200, 135, 50, 0.25);
+
+  /* Precision Minimalist Radii */
+  --p-radius-xs: 3px;
+  --p-radius-sm: 6px;
+  --p-radius-md: 10px;
+  --p-radius-lg: 16px;
+  --p-radius-xl: 22px;
+  --p-radius-full: 9999px;
+
+  /* Motion */
+  --p-ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
+  --p-ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --p-transition-quick: 180ms var(--p-ease-smooth);
+  --p-transition-luxe: 450ms var(--p-ease-spring);
+
+  /* Layout Constraints */
+  --p-max-width: 1280px;
+  --p-gutter: 2rem;
+}

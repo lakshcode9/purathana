@@ -1,0 +1,229 @@
+<!-- ===================================================================
+     PURATHANA TRUST ARCHITECTURE: FOUR PILLARS OF CRAFT
+     Apple-style minimalist horizontal spec strip.
+     =================================================================== -->
+
+<section class="p-pillars-section" id="process">
+  <div class="purathana-container">
+    <div class="p-pillars-grid">
+      <!-- Pillar 1: 100% Pure & Natural -->
+      <div class="p-pillar-item">
+        <div class="p-pillar-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M12 2C6.5 2 2 6.5 2 12c0 3.5 1.8 6.6 4.5 8.4C7.8 17 10 13 14 10c0 0-2 6-1 9.9 5-1.1 9-5.6 9-11.9 0-3.3-2.7-6-6-6z"/>
+          </svg>
+        </div>
+        <div class="p-pillar-content">
+          <h4 class="p-pillar-title">100%</h4>
+          <p class="p-pillar-desc">Pure &amp; Natural</p>
+        </div>
+      </div>
+
+      <!-- Pillar 2: Cold Pressed Extraction -->
+      <div class="p-pillar-item">
+        <div class="p-pillar-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+          </svg>
+        </div>
+        <div class="p-pillar-content">
+          <h4 class="p-pillar-title">Cold Pressed</h4>
+          <p class="p-pillar-desc">Extraction</p>
+        </div>
+      </div>
+
+      <!-- Pillar 3: No Added Chemicals -->
+      <div class="p-pillar-item">
+        <div class="p-pillar-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M10 2v4.5L4.5 17a3 3 0 0 0 2.5 4.5h10a3 3 0 0 0 2.5-4.5L14 6.5V2"/>
+            <line x1="8" y1="2" x2="16" y2="2"/>
+            <line x1="7" y1="14" x2="17" y2="14"/>
+          </svg>
+        </div>
+        <div class="p-pillar-content">
+          <h4 class="p-pillar-title">No Added</h4>
+          <p class="p-pillar-desc">Chemicals</p>
+        </div>
+      </div>
+
+      <!-- Pillar 4: Rich in Nutrition -->
+      <div class="p-pillar-item">
+        <div class="p-pillar-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+          </svg>
+        </div>
+        <div class="p-pillar-content">
+          <h4 class="p-pillar-title">Rich in</h4>
+          <p class="p-pillar-desc">Nutrition</p>
+        </div>
+      </div>
+
+      <!-- Pillar 5: Tradition Since Generations -->
+      <div class="p-pillar-item">
+        <div class="p-pillar-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M12 22v-9"/>
+            <path d="M12 13c-2.5-1.5-5-1-6 1 0-3 2-6 6-6s6 3 6 6c-1-2-3.5-2.5-6-1z"/>
+            <path d="M12 8C9.5 6.5 7 7 6 9c0-3 2-6 6-6s6 3 6 6c-1-2-3.5-2.5-6-1z"/>
+          </svg>
+        </div>
+        <div class="p-pillar-content">
+          <h4 class="p-pillar-title">Tradition</h4>
+          <p class="p-pillar-desc">Since Generations</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.p-pillars-section {
+  padding: 2.25rem 0;
+  background: #FAF5EB;
+  border-bottom: 1px solid rgba(40, 66, 45, 0.12);
+}
+
+.p-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.p-pillar-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.75rem;
+  position: relative;
+}
+
+@media (min-width: 991px) {
+  .p-pillar-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: -0.75rem;
+    top: 15%;
+    bottom: 15%;
+    width: 1px;
+    background: rgba(40, 66, 45, 0.14);
+  }
+}
+
+.p-pillar-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: transparent;
+  color: #28422D;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1.5px solid #28422D;
+  transition: all 0.3s ease;
+}
+
+.p-pillar-item:hover .p-pillar-icon {
+  background: #28422D;
+  color: #FAF5EB;
+  transform: translateY(-2px);
+}
+
+.p-pillar-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.p-pillar-title {
+  font-family: 'Marcellus', Georgia, serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #24221E;
+  margin: 0;
+  letter-spacing: 0.01em;
+  line-height: 1.25;
+}
+
+.p-pillar-desc {
+  font-family: var(--p-font-sans, sans-serif);
+  font-size: 0.75rem;
+  color: rgba(36, 34, 30, 0.72);
+  line-height: 1.35;
+  margin: 0;
+  font-weight: 500;
+}
+
+@media (max-width: 990px) {
+  .p-pillars-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .p-pillars-section {
+    padding: 1.25rem 0 !important;
+    overflow: hidden !important;
+  }
+  .p-pillars-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.85rem 0.5rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    margin: 0 auto !important;
+    justify-content: center !important;
+    justify-items: center !important;
+  }
+  .p-pillar-item {
+    width: 100% !important;
+    max-width: 160px !important;
+    margin: 0 auto !important;
+    gap: 0.35rem !important;
+    align-items: center !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+  }
+  .p-pillar-item:last-child {
+    grid-column: 1 / -1 !important;
+    max-width: 220px !important;
+    margin-inline: auto !important;
+    justify-self: center !important;
+  }
+  .p-pillar-icon {
+    width: 38px !important;
+    height: 38px !important;
+    border-width: 1.2px !important;
+  }
+  .p-pillar-icon svg {
+    width: 17px !important;
+    height: 17px !important;
+  }
+  .p-pillar-title {
+    font-size: 0.85rem !important;
+    line-height: 1.2 !important;
+  }
+  .p-pillar-desc {
+    font-size: 0.68rem !important;
+    line-height: 1.25 !important;
+  }
+}
+</style>
+
+{% schema %}
+{
+  "name": "Purathana Trust Pillars",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Purathana Trust Pillars"
+    }
+  ]
+}
+{% endschema %}
