@@ -1,0 +1,90 @@
+/* ===================================================================
+   PURATHANA - TRADITIONAL HERITAGE LUXURY DESIGN SYSTEM
+   Palette:
+     Canvas / Background: #F4E8D2 (Warm Ivory / Cream)
+     Main Brand / Header: #5A1F22 (Deep Burgundy)
+     Action Buttons: #7A2E25 (Earthy Red-Brown)
+     Text Inks: #2F2923 (Dark Espresso)
+     Secondary Accent: #7A8060 (Muted Olive Green)
+     Highlights / Stars: #C88732 (Antique Gold)
+   Typography: Classical Marcellus + Plus Jakarta Sans + Italiana
+   =================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Italiana&family=Marcellus&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Canvas & Surfaces (Warm Linen / Parchment from Reference UI) */
+  --bg-canvas: #F8F5EE;
+  --bg-surface: #FFFFFF;
+  --bg-surface-warm: #F4EFE6;
+  --bg-surface-dark: #1C2B1D;
+  --bg-card: #F7F1E5;
+  --bg-card-hover: #EFE6D5;
+  --bg-overlay: rgba(28, 43, 29, 0.55);
+
+  /* Primary Brand: Deep Forest Green */
+  --color-forest: #243725;
+  --color-forest-dark: #1C2B1D;
+  --color-forest-light: #364E37;
+  --color-burgundy: #243725;
+
+  /* Action Buttons: Deep Forest Green */
+  --color-btn: #243725;
+  --color-btn-hover: #172418;
+
+  /* Botanical Pastels for Oil Cards (Exact Mockup Colors) */
+  --card-groundnut: #F6E9D7;
+  --card-mustard: #F7ECB7;
+  --card-coconut: #EAECE1;
+  --card-sesame: #E8DCE7;
+  --card-sunflower: #F8E7AA;
+
+  /* Secondary Accent: Muted Olive Green */
+  --color-olive: #556B52;
+  --color-olive-dark: #3F523C;
+
+  /* Highlights / Gold Accents */
+  --color-gold: #C88E35;
+  --color-gold-light: #DE9F42;
+  --color-amber: #C88E35;
+  --color-terracotta: #8C4736;
+
+  /* Typography Colors: Dark Espresso / Charcoal */
+  --text-primary: #2B2B2B;
+  --text-secondary: rgba(43, 43, 43, 0.78);
+  --text-muted: rgba(43, 43, 43, 0.58);
+  --text-light: #FAF5EB;
+  --text-accent: #C88E35;
+
+  /* Architectural Hairlines */
+  --border-subtle: rgba(43, 43, 43, 0.10);
+  --border-medium: rgba(36, 55, 37, 0.20);
+  --border-strong: rgba(36, 55, 37, 0.35);
+
+  /* Classical Heritage Font Stacks */
+  --font-heading: 'Marcellus', Georgia, serif;
+  --font-display: 'Marcellus', Georgia, serif;
+  --font-serif: 'Italiana', Georgia, serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, sans-serif;
+  --font-script: 'Caveat', 'Alex Brush', cursive;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  /* Elevated Modernist Shadows */
+  --shadow-sm: 0 2px 8px rgba(47, 41, 35, 0.05);
+  --shadow-md: 0 6px 18px rgba(47, 41, 35, 0.08);
+  --shadow-lg: 0 16px 36px rgba(90, 31, 34, 0.10);
+  --shadow-xl: 0 24px 50px rgba(90, 31, 34, 0.14);
+
+  /* Border Radii */
+  --radius-xs: 3px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 22px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+  --transition-smooth: 400ms cubic-bezier(0.16, 1, 0.3, 1);
+}

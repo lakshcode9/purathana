@@ -1,0 +1,336 @@
+<!-- ===================================================================
+     PURATHANA STORY: MORE THAN JUST OIL
+     Replicating the reference UI story showcase
+     =================================================================== -->
+
+<section class="p-story-section" id="story" style="position:relative; overflow:hidden;">
+  <div class="purathana-container" style="position:relative; z-index:2;">
+    <div class="p-story-grid">
+      <!-- Left Column: Authentic Stone Mill Pouring Visual -->
+      <div class="p-story-visual-col">
+        <div class="p-story-image-card">
+          <img src="{{ 'purathana-story-pour.jpg' | asset_url }}" 
+               alt="Purathana Traditional Cold Press Pouring - From our farms to your family" 
+               class="p-story-image" 
+               loading="lazy" />
+        </div>
+      </div>
+
+      <!-- Right Column: Brand Purpose & Pillars -->
+      <div class="p-story-copy-col">
+        <div class="p-story-eyebrow">WHY PURATHANA</div>
+        
+        <h2 class="p-story-headline">More Than Just Oil</h2>
+
+        <p class="p-story-lead">
+          At Purathana, we believe in the power of pure. Our cold pressed oils are made using traditional methods, keeping the natural nutrients, aroma and goodness intact. Because your health deserves nothing but the best — just as nature intended.
+        </p>
+
+        <!-- 4 Sub-Pillars -->
+        <div class="p-story-pillars-row">
+          <div class="p-story-subpillar">
+            <div class="p-subpillar-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <path d="M4 22h16M12 2l8 6H4l8-6zM6 8v10M10 8v10M14 8v10M18 8v10"/>
+              </svg>
+            </div>
+            <div class="p-subpillar-label">Tradition &amp; Authenticity</div>
+          </div>
+
+          <div class="p-story-subpillar">
+            <div class="p-subpillar-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <polyline points="9 12 11 14 15 10"/>
+              </svg>
+            </div>
+            <div class="p-subpillar-label">Quality You Can Trust</div>
+          </div>
+
+          <div class="p-story-subpillar">
+            <div class="p-subpillar-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+              </svg>
+            </div>
+            <div class="p-subpillar-label">Goodness for Your Family</div>
+          </div>
+
+          <div class="p-story-subpillar">
+            <div class="p-subpillar-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <path d="M12 22v-9"/>
+                <path d="M12 13c-2.5-1.5-5-1-6 1 0-3 2-6 6-6s6 3 6 6c-1-2-3.5-2.5-6-1z"/>
+                <path d="M12 8C9.5 6.5 7 7 6 9c0-3 2-6 6-6s6 3 6 6c-1-2-3.5-2.5-6-1z"/>
+              </svg>
+            </div>
+            <div class="p-subpillar-label">A Healthier Tomorrow</div>
+          </div>
+        </div>
+
+        <div class="p-story-cta-wrap">
+          <a href="#process" class="p-btn-story">
+            <span>OUR STORY</span>
+            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.p-story-section {
+  padding: 5.5rem 0;
+  background-color: #FAF5EB;
+  border-top: 1px solid rgba(40, 66, 45, 0.08);
+  position: relative;
+}
+
+.p-story-leaf-branch {
+  position: absolute;
+  right: -25px;
+  bottom: -25px;
+  width: clamp(140px, 15vw, 220px);
+  height: auto;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.82;
+}
+
+.p-story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 4.5rem;
+  align-items: center;
+}
+
+.p-story-visual-col {
+  position: relative;
+}
+
+.p-story-image-card {
+  position: relative;
+  border-radius: 0;
+  overflow: visible;
+  box-shadow: none;
+  border: none;
+  background: transparent;
+  width: 100%;
+  height: 100%;
+  -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 58%, rgba(0,0,0,0) 98%);
+  mask-image: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 58%, rgba(0,0,0,0) 98%);
+}
+
+.p-story-image-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(250, 245, 235, 0) 0%, rgba(250, 245, 235, 0.75) 60%, rgba(250, 245, 235, 1) 100%);
+  pointer-events: none;
+}
+
+.p-story-image {
+  width: 100%;
+  height: 100%;
+  min-height: 480px;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.p-story-image-card:hover .p-story-image {
+  transform: scale(1.02);
+}
+
+.p-story-copy-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.p-story-eyebrow {
+  font-family: var(--p-font-sans, system-ui);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #28422D;
+  margin-bottom: 0.85rem;
+}
+
+.p-story-headline {
+  font-family: 'Marcellus', Georgia, serif;
+  font-size: clamp(2.4rem, 4vw, 3.4rem);
+  line-height: 1.15;
+  color: #24221E;
+  margin: 0 0 1.25rem;
+  font-weight: 400;
+}
+
+.p-story-lead {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: rgba(36, 34, 30, 0.82);
+  margin: 0 0 2.25rem;
+  max-width: 580px;
+}
+
+.p-story-pillars-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  padding-block: 1.75rem;
+  border-top: 1px solid rgba(40, 66, 45, 0.14);
+  border-bottom: 1px solid rgba(40, 66, 45, 0.14);
+  margin-bottom: 2.25rem;
+}
+
+.p-story-subpillar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.65rem;
+  position: relative;
+}
+
+.p-story-subpillar:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: -0.625rem;
+  top: 15%;
+  height: 70%;
+  width: 1px;
+  background-color: rgba(40, 66, 45, 0.12);
+}
+
+.p-subpillar-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1.4px solid #28422D;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #28422D;
+  background: rgba(40, 66, 45, 0.03);
+}
+
+.p-subpillar-label {
+  font-family: 'Marcellus', serif;
+  font-size: 0.82rem;
+  line-height: 1.35;
+  color: #24221E;
+  font-weight: 500;
+}
+
+.p-btn-story {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  background: #28422D;
+  color: #FAF5EB;
+  padding: 0.95rem 2.2rem;
+  border-radius: 9999px;
+  font-family: var(--p-font-sans, system-ui);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(40, 66, 45, 0.2);
+  align-self: flex-start;
+}
+
+.p-btn-story:hover {
+  background: #1C3020;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(40, 66, 45, 0.28);
+}
+
+@media (max-width: 990px) {
+  .p-story-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .p-story-pillars-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  .p-story-subpillar:not(:last-child)::after {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .p-story-section {
+    padding: 2.75rem 0 !important;
+  }
+  .p-story-grid {
+    gap: 1.5rem !important;
+  }
+  .p-story-image-card {
+    max-height: 210px !important;
+    border-radius: 14px !important;
+    overflow: hidden !important;
+  }
+  .p-story-image {
+    height: 210px !important;
+    width: 100% !important;
+    object-fit: cover !important;
+  }
+  .p-story-headline {
+    font-size: 1.75rem !important;
+    margin-bottom: 0.6rem !important;
+    line-height: 1.2 !important;
+  }
+  .p-story-lead {
+    font-size: 0.88rem !important;
+    line-height: 1.55 !important;
+    margin-bottom: 1.25rem !important;
+  }
+  .p-story-pillars-row {
+    gap: 0.75rem 0.5rem !important;
+    padding-block: 0.85rem !important;
+    margin-bottom: 1.25rem !important;
+  }
+  .p-subpillar-icon {
+    width: 36px !important;
+    height: 36px !important;
+  }
+  .p-subpillar-icon svg {
+    width: 18px !important;
+    height: 18px !important;
+  }
+  .p-subpillar-label {
+    font-size: 0.72rem !important;
+  }
+  .p-btn-story {
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 0.8rem 1.5rem !important;
+    font-size: 0.78rem !important;
+  }
+}
+</style>
+
+{% schema %}
+{
+  "name": "Purathana Story",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Purathana Story"
+    }
+  ]
+}
+{% endschema %}

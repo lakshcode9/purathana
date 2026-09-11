@@ -1,0 +1,945 @@
+/* ===================================================================
+   PURATHANA - 1-TO-1 MOCKUP OVERHAUL STYLES
+   Exact reproduction of reference UI:
+   - Header with official logo
+   - Hero banner with supplied background image & typography
+   - 5-item Trust Badges bar
+   - 5-Column Pastel Product Cards grid with vintage line art footers
+   - Why Purathana split section with handwritten oil pour overlay
+   - Deep Forest Green footer with white logo & script quote
+   =================================================================== */
+
+/* Page Background */
+body {
+  background-color: var(--bg-canvas, #F8F5EE);
+  color: var(--text-primary, #2B2B2B);
+  font-family: var(--font-body);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Container Utility */
+.p-container {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ===================================================================
+/* Announcement Ticker Bar Override */
+.ticker-bar {
+  background-color: #F4EDE2 !important;
+  color: #243725 !important;
+  border-bottom: 1px solid rgba(36, 55, 37, 0.12) !important;
+  font-family: var(--font-body);
+  font-size: 0.76rem;
+  letter-spacing: 0.05em;
+  height: 36px;
+  position: relative;
+  overflow: hidden;
+  z-index: 101;
+}
+
+.ticker-item strong {
+  color: #1E2E1E;
+}
+
+/* ===================================================================
+   1. HEADER & NAVIGATION
+   =================================================================== */
+.p-header {
+  background-color: #F8F5EE;
+  border-bottom: 1px solid rgba(43, 43, 43, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.p-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 86px;
+  padding: 0 3.5rem 0 5.2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.p-brand-logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.p-brand-logo-img {
+  height: 52px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.25s ease;
+}
+
+.p-brand-logo-link:hover .p-brand-logo-img {
+  transform: scale(1.02);
+}
+
+.p-nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.p-nav-link {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: #333333;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: color 0.2s ease;
+  position: relative;
+  padding: 0.4rem 0;
+}
+
+.p-nav-link:hover,
+.p-nav-link.active {
+  color: #243725;
+  font-weight: 600;
+}
+
+.p-nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #243725;
+  transition: width 0.25s ease;
+}
+
+.p-nav-link:hover::after,
+.p-nav-link.active::after {
+  width: 100%;
+}
+
+.p-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+}
+
+.p-icon-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #333333;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem;
+  border-radius: 50%;
+  transition: background 0.2s ease, color 0.2s ease;
+  position: relative;
+  text-decoration: none;
+}
+
+.p-icon-btn:hover {
+  background: rgba(36, 55, 37, 0.06);
+  color: #243725;
+}
+
+.p-cart-badge {
+  position: absolute;
+  top: -2px;
+  right: -4px;
+  background-color: #243725;
+  color: #FFFFFF;
+  font-size: 0.65rem;
+  font-weight: 700;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===================================================================
+   2. HERO SECTION (USING EXACT SUPPLIED BACKGROUND BANNER)
+   =================================================================== */
+.p-hero-exact {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  min-height: 560px;
+  background-image: url('../../public/hero-bg-high.png');
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Soft left vignette overlay for maximum typography legibility */
+.p-hero-exact::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 55%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(248, 245, 238, 0.85) 0%, rgba(248, 245, 238, 0.55) 70%, rgba(248, 245, 238, 0) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.p-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 540px;
+  padding: 4rem 0 4rem 6%;
+}
+
+.p-hero-eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #556B52;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.p-hero-title {
+  font-family: var(--font-heading);
+  font-size: 3.6rem;
+  line-height: 1.12;
+  color: #1E2E1E;
+  font-weight: 400;
+  margin: 0 0 1.25rem 0;
+}
+
+.p-hero-desc {
+  font-family: var(--font-body);
+  font-size: 1.02rem;
+  line-height: 1.65;
+  color: #3A453A;
+  margin-bottom: 2.2rem;
+  max-width: 470px;
+}
+
+.p-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: #243725;
+  color: #FFFFFF;
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.95rem 2.2rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 6px 18px rgba(36, 55, 37, 0.22);
+}
+
+.p-cta-btn:hover {
+  background-color: #172418;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(36, 55, 37, 0.32);
+}
+
+.p-cta-btn svg {
+  transition: transform 0.25s ease;
+}
+
+.p-cta-btn:hover svg {
+  transform: translateX(4px);
+}
+
+/* ===================================================================
+   3. TRUST BADGES BAR (5 FEATURES)
+   =================================================================== */
+.p-trust-bar {
+  background-color: #FAF7F2;
+  border-top: 1px solid rgba(43, 43, 43, 0.08);
+  border-bottom: 1px solid rgba(43, 43, 43, 0.08);
+  padding: 1.8rem 0;
+}
+
+.p-trust-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+}
+
+.p-trust-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 1rem;
+  position: relative;
+}
+
+.p-trust-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 15%;
+  height: 70%;
+  width: 1px;
+  background-color: rgba(43, 43, 43, 0.12);
+}
+
+.p-trust-icon-ring {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 1px solid rgba(36, 55, 37, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #243725;
+  margin-bottom: 0.75rem;
+  background-color: #FFFFFF;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.p-trust-item:hover .p-trust-icon-ring {
+  transform: translateY(-3px);
+  border-color: #243725;
+  box-shadow: 0 4px 12px rgba(36, 55, 37, 0.1);
+}
+
+.p-trust-title {
+  font-family: var(--font-heading);
+  font-size: 0.98rem;
+  font-weight: 500;
+  color: #1E2E1E;
+  margin: 0 0 0.2rem 0;
+}
+
+.p-trust-sub {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  color: #666666;
+  margin: 0;
+}
+
+/* ===================================================================
+   4. PRODUCT SHOWCASE GRID (NATURE'S BEST, BOTTLED FOR YOU)
+   =================================================================== */
+.p-products-section {
+  padding: 5rem 0;
+  background-color: #F8F5EE;
+  position: relative;
+  overflow: hidden;
+}
+
+.p-section-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.p-section-eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #556B52;
+  margin-bottom: 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.p-section-eyebrow::before,
+.p-section-eyebrow::after {
+  content: '';
+  display: inline-block;
+  width: 32px;
+  height: 1px;
+  background-color: #A4B3A2;
+}
+
+.p-section-title {
+  font-family: var(--font-heading);
+  font-size: 2.8rem;
+  color: #1E2E1E;
+  margin: 0 0 0.8rem 0;
+  font-weight: 400;
+}
+
+.p-section-leaf-motif {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #556B52;
+}
+
+/* 5 Column Grid */
+.p-product-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.4rem;
+}
+
+.p-product-card {
+  border-radius: 18px;
+  padding: 1.8rem 1.2rem 0 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.03);
+  transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.32s ease;
+  min-height: 480px;
+}
+
+.p-product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
+}
+
+/* Pastel Card Variations */
+.p-card-groundnut { background-color: #F6E9D7; }
+.p-card-mustard   { background-color: #F7ECB7; }
+.p-card-coconut   { background-color: #EAECE1; }
+.p-card-sesame    { background-color: #E8DCE7; }
+.p-card-sunflower { background-color: #F8E7AA; }
+
+.p-card-head {
+  text-align: center;
+  margin-bottom: 1.2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.p-card-name {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #1E2E1E;
+  margin: 0 0 0.4rem 0;
+}
+
+.p-card-tagline {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: #555555;
+  margin: 0;
+  line-height: 1.35;
+}
+
+.p-card-media {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  margin: 0.8rem 0;
+}
+
+.p-card-img {
+  max-width: 100%;
+  max-height: 240px;
+  object-fit: contain;
+  transition: transform 0.35s ease;
+}
+
+.p-product-card:hover .p-card-img {
+  transform: scale(1.05);
+}
+
+.p-card-footer {
+  text-align: center;
+  padding-bottom: 1.4rem;
+  position: relative;
+  z-index: 2;
+}
+
+.p-shop-link {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #1E2E1E;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: gap 0.25s ease, color 0.25s ease;
+  border-bottom: 1px solid #1E2E1E;
+  padding-bottom: 2px;
+}
+
+.p-shop-link:hover {
+  gap: 0.65rem;
+  color: #243725;
+}
+
+/* Vintage Line Art Illustration Overlay at bottom of card */
+.p-card-sketch-bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 110px;
+  background-size: cover;
+  background-position: bottom center;
+  opacity: 0.28;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Product Stage Alignment & Spacing Overrides */
+.p-monument-stage {
+  position: relative;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto 3rem auto;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+
+.p-monument-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3.5rem;
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.p-monument-bottle-col {
+  flex: 0 0 46%;
+  max-width: 46%;
+}
+
+.p-monument-copy-col {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+/* ===================================================================
+   5. WHY PURATHANA SECTION (MORE THAN JUST OIL)
+   =================================================================== */
+.p-why-section {
+  padding: 5rem 0;
+  background-color: #FAF7F2;
+  position: relative;
+  overflow: hidden;
+}
+
+.p-why-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.p-why-image-wrapper {
+  position: relative;
+  border-radius: 0;
+  overflow: visible;
+  box-shadow: none;
+  width: 100%;
+  height: 100%;
+  -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 58%, rgba(0,0,0,0) 98%);
+  mask-image: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 58%, rgba(0,0,0,0) 98%);
+}
+
+.p-why-image-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(250, 247, 242, 0) 0%, rgba(250, 247, 242, 0.75) 60%, rgba(250, 247, 242, 1) 100%);
+  pointer-events: none;
+}
+
+.p-why-image {
+  width: 100%;
+  height: 100%;
+  min-height: 480px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-radius: 0;
+}
+
+/* Right Column Content */
+.p-why-content {
+  padding-right: 2rem;
+}
+
+.p-why-eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #556B52;
+  margin-bottom: 0.8rem;
+}
+
+.p-why-title {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  line-height: 1.15;
+  color: #1E2E1E;
+  margin: 0 0 1.25rem 0;
+  font-weight: 400;
+}
+
+.p-why-text {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #4A4A4A;
+  margin-bottom: 2.2rem;
+}
+
+.p-why-features-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  margin-bottom: 2.2rem;
+}
+
+.p-why-feat-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.p-feat-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid rgba(36, 55, 37, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #243725;
+  flex-shrink: 0;
+  background-color: #FFFFFF;
+}
+
+.p-feat-text {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #1E2E1E;
+}
+
+/* Corner Leaves Frame */
+.p-corner-leaf-tr {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 140px;
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.p-corner-leaf-br {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  width: 140px;
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+/* ===================================================================
+   6. FOOTER (DEEP FOREST GREEN)
+   =================================================================== */
+.p-footer-exact {
+  background-color: #1C2B1D;
+  color: #FFFFFF;
+  padding: 4.5rem 0 2.5rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Mountain Outline Illustration Background */
+.p-footer-exact::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1400px;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 300' fill='none' stroke='rgba(255,255,255,0.05)' stroke-width='1.5'%3E%3Cpath d='M0,220 L150,140 L300,190 L500,80 L700,180 L900,100 L1100,200 L1200,150'/%3E%3Cpath d='M0,250 L200,170 L400,220 L600,130 L800,210 L1000,160 L1200,230'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  pointer-events: none;
+}
+
+.p-footer-grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.p-footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.p-social-link {
+  color: #FFFFFF;
+  opacity: 0.8;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  display: inline-flex;
+}
+
+.p-social-link:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.p-footer-center {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.p-footer-logo-img {
+  height: 64px;
+  width: auto;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+  filter: brightness(0) invert(1);
+}
+
+.p-footer-quote-right {
+  text-align: right;
+}
+
+.p-footer-script-quote {
+  font-family: var(--font-script);
+  font-size: 2.2rem;
+  color: #E6D2B5;
+  margin: 0;
+  transform: rotate(-3deg);
+  display: inline-block;
+}
+
+.p-footer-bottom-bar {
+  position: relative;
+  z-index: 2;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1.8rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* ===================================================================
+   RESPONSIVE DESIGN (TABLETS & MOBILE)
+   =================================================================== */
+@media (max-width: 1100px) {
+  .p-product-cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .p-trust-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem 0;
+  }
+  .p-trust-item:nth-child(3)::after {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .p-header-inner {
+    padding: 0 1.2rem;
+    height: 72px;
+  }
+  .p-nav-menu {
+    display: none;
+  }
+  .p-hero-exact {
+    min-height: 480px;
+    background-position: center center;
+  }
+  .p-hero-exact::before {
+    width: 100%;
+    background: rgba(248, 245, 238, 0.88);
+  }
+  .p-hero-content {
+    padding: 3rem 1.5rem;
+    max-width: 100%;
+  }
+  .p-hero-title {
+    font-size: 2.6rem;
+  }
+  .p-trust-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .p-trust-item::after {
+    display: none !important;
+  }
+  .p-product-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .p-why-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .p-footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+  .p-footer-quote-right {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .p-product-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .p-trust-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===================================================================
+   NATURE LEAF BRANCH ACCENTS & WELCOME SCREEN OVERHAUL
+   =================================================================== */
+
+/* Welcome / Intro Curtain */
+.p-intro-curtain {
+  position: fixed;
+  inset: 0;
+  background-color: #FAF5EB;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+.p-intro-curtain.p-curtain-exit {
+  opacity: 0;
+  transform: scale(1.04);
+  pointer-events: none;
+}
+
+.p-intro-official-logo {
+  max-width: 340px;
+  width: 85%;
+  height: auto;
+  margin-bottom: 1.2rem;
+  animation: pIntroPulse 2.2s ease-in-out infinite alternate;
+}
+
+.p-intro-nature-canopy {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-height: 220px;
+  object-fit: cover;
+  pointer-events: none;
+  opacity: 0.9;
+  z-index: 1;
+}
+
+.p-intro-nature-branch-tl {
+  position: absolute;
+  top: -30px;
+  left: -40px;
+  width: 280px;
+  pointer-events: none;
+  opacity: 0.85;
+  transform: rotate(-10deg);
+  z-index: 1;
+}
+
+.p-intro-nature-branch-br {
+  position: absolute;
+  bottom: -40px;
+  right: -40px;
+  width: 320px;
+  pointer-events: none;
+  opacity: 0.85;
+  transform: scaleX(-1) rotate(15deg);
+  z-index: 1;
+}
+
+@keyframes pIntroPulse {
+  from { transform: scale(0.98); opacity: 0.95; }
+  to   { transform: scale(1.02); opacity: 1; }
+}
+
+/* General Nature Floating Accent Positioning */
+.p-nature-accent {
+  position: absolute;
+  pointer-events: none;
+  z-index: 3;
+  user-select: none;
+  max-width: 35vw;
+}
+
+.p-nature-branch-tr {
+  top: 0;
+  right: 0;
+  width: clamp(120px, 14vw, 180px);
+  opacity: 0.85;
+  transform: rotate(5deg);
+}
+
+.p-nature-branch-tl {
+  top: 0;
+  left: 0;
+  width: clamp(120px, 14vw, 180px);
+  opacity: 0.85;
+  transform: scaleX(-1) rotate(-5deg);
+}
+
+.p-nature-branch-br {
+  bottom: 10px;
+  right: 0;
+  width: clamp(130px, 15vw, 190px);
+  opacity: 0.75;
+  transform: rotate(-15deg);
+}
+
+.p-nature-subtle {
+  opacity: 0.42 !important;
+  filter: contrast(0.9) brightness(1.05);
+}

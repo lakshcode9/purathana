@@ -1,0 +1,13 @@
+{
+  "type": "footer",
+  "name": "Purathana Footer",
+  "sections": {
+    "purathana_footer": {
+      "type": "purathana-footer",
+      "settings": {}
+    }
+  },
+  "order": [
+    "purathana_footer"
+  ]
+}

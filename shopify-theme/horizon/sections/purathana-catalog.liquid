@@ -1,0 +1,1980 @@
+<!-- ===================================================================
+     PURATHANA NATURE'S BEST, BOTTLED FOR YOU
+     1:1 Mockup Replication: 5 Pastel Ingredient Cards + Vintage Etchings
+     Interactive Tap-In Product Inspection Modal & Monumental Showcase Stages
+     =================================================================== -->
+
+<section class="p-catalog-section" id="our-oils">
+  <!-- Mockup Flanking Botanical Leaf Branches -->
+  <img src="{{ 'leaf-branch-side.png' | asset_url }}" 
+       alt="" 
+       class="p-nature-accent p-nature-branch-tl" 
+       style="top:-10px; left:-15px; width:170px; opacity:0.85; z-index:3;" 
+       aria-hidden="true" />
+  <img src="{{ 'leaf-branch-side.png' | asset_url }}" 
+       alt="" 
+       class="p-nature-accent p-nature-branch-tr" 
+       style="top:-10px; right:-15px; width:170px; opacity:0.85; z-index:3;" 
+       aria-hidden="true" />
+
+  <div class="purathana-container">
+    <!-- Section Header matching mockup 1:1 -->
+    <div class="p-section-heading">
+      <div class="p-leaf-motif">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#28422D" stroke-width="1.6">
+          <path d="M12 2C6.5 2 2 6.5 2 12c0 3.5 1.8 6.6 4.5 8.4C7.8 17 10 13 14 10c0 0-2 6-1 9.9 5-1.1 9-5.6 9-11.9 0-3.3-2.7-6-6-6z"/>
+        </svg>
+      </div>
+      <div class="p-eyebrow">OUR OILS</div>
+      <h2 class="p-section-title">Nature's Best, Bottled for You</h2>
+      <p class="p-section-sub">
+        Cold pressed goodness for your everyday cooking. Real seeds, cold crushed in traditional botanical mortars.
+      </p>
+    </div>
+
+    <!-- ===================================================================
+         THE 5 MOCKUP PASTEL INGREDIENT CARDS (Real Ingredients & Vintage Etchings)
+         =================================================================== -->
+    <div class="p-mockup-cards-wrap">
+      <div class="p-mockup-cards-grid">
+        
+        <!-- CARD 1: Groundnut Oil -->
+        {% assign p_groundnut = all_products['cold-pressed-groundnut-oil'] %}
+        <div class="p-mock-card p-mock-card-groundnut" 
+             onclick="openProductModal('groundnut')"
+             data-oil-key="groundnut"
+             role="button"
+             tabindex="0"
+             aria-label="View Cold Pressed Groundnut Oil details and options">
+          <div class="p-mock-card-header">
+            <h3 class="p-mock-card-title">Groundnut Oil</h3>
+            <p class="p-mock-card-tagline">Rich in taste, full of goodness.</p>
+          </div>
+          <div class="p-mock-card-dish-wrap">
+            <img src="{{ 'purathana-dish-groundnut.png' | asset_url }}" 
+                 alt="Real raw groundnuts and pure cold pressed oil bowl" 
+                 class="p-mock-card-dish-img" 
+                 loading="lazy" />
+          </div>
+          <div class="p-mock-card-btn-wrap">
+            <button type="button" class="p-mock-shop-btn" onclick="event.stopPropagation(); openProductModal('groundnut');">
+              <span>SHOP NOW</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+          </div>
+          <div class="p-mock-card-etching-wrap">
+            <img src="{{ 'purathana-etching-groundnut.png' | asset_url }}" 
+                 alt="" 
+                 class="p-mock-card-etching-img" 
+                 loading="lazy" 
+                 aria-hidden="true" />
+          </div>
+        </div>
+
+        <!-- CARD 2: Mustard Oil -->
+        {% assign p_mustard = all_products['cold-pressed-mustard-oil'] %}
+        <div class="p-mock-card p-mock-card-mustard" 
+             onclick="openProductModal('mustard')"
+             data-oil-key="mustard"
+             role="button"
+             tabindex="0"
+             aria-label="View Cold Pressed Mustard Oil details and options">
+          <div class="p-mock-card-header">
+            <h3 class="p-mock-card-title">Mustard Oil</h3>
+            <p class="p-mock-card-tagline">Bold flavour, stronger health.</p>
+          </div>
+          <div class="p-mock-card-dish-wrap">
+            <img src="{{ 'purathana-dish-mustard.png' | asset_url }}" 
+                 alt="Real mustard seeds and yellow mustard blossom dish" 
+                 class="p-mock-card-dish-img" 
+                 loading="lazy" />
+          </div>
+          <div class="p-mock-card-btn-wrap">
+            <button type="button" class="p-mock-shop-btn" onclick="event.stopPropagation(); openProductModal('mustard');">
+              <span>SHOP NOW</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+          </div>
+          <div class="p-mock-card-etching-wrap">
+            <img src="{{ 'purathana-etching-mustard.png' | asset_url }}" 
+                 alt="" 
+                 class="p-mock-card-etching-img" 
+                 loading="lazy" 
+                 aria-hidden="true" />
+          </div>
+        </div>
+
+        <!-- CARD 3: Coconut Oil -->
+        {% assign p_coconut = all_products['cold-pressed-coconut-oil'] %}
+        <div class="p-mock-card p-mock-card-coconut" 
+             onclick="openProductModal('coconut')"
+             data-oil-key="coconut"
+             role="button"
+             tabindex="0"
+             aria-label="View Cold Pressed Coconut Oil details and options">
+          <div class="p-mock-card-header">
+            <h3 class="p-mock-card-title">Coconut Oil</h3>
+            <p class="p-mock-card-tagline">Pure by nature, perfect for you.</p>
+          </div>
+          <div class="p-mock-card-dish-wrap">
+            <img src="{{ 'purathana-dish-coconut.png' | asset_url }}" 
+                 alt="Real cracked coconut copra and cold pressed coconut oil" 
+                 class="p-mock-card-dish-img" 
+                 loading="lazy" />
+          </div>
+          <div class="p-mock-card-btn-wrap">
+            <button type="button" class="p-mock-shop-btn" onclick="event.stopPropagation(); openProductModal('coconut');">
+              <span>SHOP NOW</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+          </div>
+          <div class="p-mock-card-etching-wrap">
+            <img src="{{ 'purathana-etching-coconut.png' | asset_url }}" 
+                 alt="" 
+                 class="p-mock-card-etching-img" 
+                 loading="lazy" 
+                 aria-hidden="true" />
+          </div>
+        </div>
+
+        <!-- CARD 4: Sesame Oil -->
+        {% assign p_sesame = all_products['cold-pressed-sesame-oil-gingelly'] %}
+        <div class="p-mock-card p-mock-card-sesame" 
+             onclick="openProductModal('sesame')"
+             data-oil-key="sesame"
+             role="button"
+             tabindex="0"
+             aria-label="View Cold Pressed Sesame Oil details and options">
+          <div class="p-mock-card-header">
+            <h3 class="p-mock-card-title">Sesame Oil</h3>
+            <p class="p-mock-card-tagline">Small seeds, big benefits.</p>
+          </div>
+          <div class="p-mock-card-dish-wrap">
+            <img src="{{ 'purathana-dish-sesame.png' | asset_url }}" 
+                 alt="Heirloom black and white sesame seeds with golden oil dish" 
+                 class="p-mock-card-dish-img" 
+                 loading="lazy" />
+          </div>
+          <div class="p-mock-card-btn-wrap">
+            <button type="button" class="p-mock-shop-btn" onclick="event.stopPropagation(); openProductModal('sesame');">
+              <span>SHOP NOW</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+          </div>
+          <div class="p-mock-card-etching-wrap">
+            <img src="{{ 'purathana-etching-sesame.png' | asset_url }}" 
+                 alt="" 
+                 class="p-mock-card-etching-img" 
+                 loading="lazy" 
+                 aria-hidden="true" />
+          </div>
+        </div>
+
+        <!-- CARD 5: Sunflower Oil -->
+        {% assign p_sunflower = all_products['cold-pressed-sunflower-oil'] %}
+        <div class="p-mock-card p-mock-card-sunflower" 
+             onclick="openProductModal('sunflower')"
+             data-oil-key="sunflower"
+             role="button"
+             tabindex="0"
+             aria-label="View Cold Pressed Sunflower Oil details and options">
+          <div class="p-mock-card-header">
+            <h3 class="p-mock-card-title">Sunflower Oil</h3>
+            <p class="p-mock-card-tagline">Light, healthy, heart friendly.</p>
+          </div>
+          <div class="p-mock-card-dish-wrap">
+            <img src="{{ 'purathana-dish-sunflower.png' | asset_url }}" 
+                 alt="Fresh sunflower blossom and seed bowl with golden oil" 
+                 class="p-mock-card-dish-img" 
+                 loading="lazy" />
+          </div>
+          <div class="p-mock-card-btn-wrap">
+            <button type="button" class="p-mock-shop-btn" onclick="event.stopPropagation(); openProductModal('sunflower');">
+              <span>SHOP NOW</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+          </div>
+          <div class="p-mock-card-etching-wrap">
+            <img src="{{ 'purathana-etching-sunflower.png' | asset_url }}" 
+                 alt="" 
+                 class="p-mock-card-etching-img" 
+                 loading="lazy" 
+                 aria-hidden="true" />
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ===================================================================
+         INTERACTIVE TAP-IN PRODUCT MODAL
+         Triggered whenever any card or SHOP NOW is tapped
+         =================================================================== -->
+    <div class="p-product-modal-backdrop" id="p-product-modal-backdrop" onclick="closeProductModal()">
+      <div class="p-product-modal-content" onclick="event.stopPropagation()">
+        <button type="button" class="p-modal-close-btn" onclick="closeProductModal()" aria-label="Close product view">
+          ✕
+        </button>
+
+        <div class="p-modal-grid">
+          <!-- Left: Half-Litre Bottle Photo & Nutrition Label Flip -->
+          <div class="p-modal-media-col">
+            <div class="p-modal-badge-row">
+              <span class="p-modal-tag" id="p-modal-tag">100% PURE &amp; NATURAL</span>
+            </div>
+            <div class="p-modal-bottle-container" id="p-modal-bottle-container">
+              <img id="p-modal-bottle-front" src="{{ 'purathana-half-groundnut.jpg' | asset_url }}" alt="Purathana Cold Pressed Oil Bottle" class="p-modal-bottle-img" />
+              <img id="p-modal-bottle-back" src="{{ 'purathana-groundnut-back.jpg' | asset_url }}" alt="Nutrition Facts" class="p-modal-bottle-img" style="display:none;" />
+            </div>
+            <div class="p-modal-flip-action">
+              <button type="button" class="p-modal-flip-btn" onclick="toggleModalBottleLabel()">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/>
+                </svg>
+                <span id="p-modal-flip-text">View Nutritional Facts</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Right: Product Selection & Instant Add to Bag -->
+          <div class="p-modal-info-col">
+            <div class="p-modal-header">
+              <span class="p-modal-step">COLD PRESSED EXTRACTION</span>
+              <h3 class="p-modal-title" id="p-modal-title">Cold Pressed Groundnut Oil</h3>
+              <p class="p-modal-tagline" id="p-modal-tagline">Rich in taste, full of goodness.</p>
+              <p class="p-modal-tasting" id="p-modal-tasting">Golden Amber Hue · Roasted Nutty Fragrance · 230°C Smoke Point</p>
+            </div>
+
+            <!-- Volume & Pack Selector -->
+            <div class="p-modal-variants-section">
+              <div class="p-modal-var-heading">
+                <span>SELECT VOLUME &amp; PACKAGING:</span>
+                <span class="p-modal-active-label" id="p-modal-active-label">Half Litre Bottle (500ml)</span>
+              </div>
+              <div class="p-modal-pills-row" id="p-modal-pills-row">
+                <!-- Dynamically populated per selected oil -->
+              </div>
+            </div>
+
+            <!-- Unit Economics & Add to Bag -->
+            <div class="p-modal-action-row">
+              <div class="p-modal-price-box">
+                <div class="p-modal-price" id="p-modal-price">₹195.00</div>
+                <div class="p-modal-tax-note">Tax Included · Free Dispatch on ₹799+</div>
+              </div>
+              <button type="button" class="p-modal-add-btn" id="p-modal-add-btn" onclick="addModalVariantToBag()">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                  <line x1="3" y1="6" x2="21" y2="6"></line>
+                  <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+                <span id="p-modal-add-text">Add to Bag</span>
+              </button>
+            </div>
+
+            <!-- Quality & Purity Chips -->
+            <div class="p-modal-chips-grid">
+              <div class="p-modal-chip">
+                <strong>Vaagai Wood</strong>
+                <span>Mortar crushed</span>
+              </div>
+              <div class="p-modal-chip">
+                <strong>&lt; 38°C Cold</strong>
+                <span>Enzymes active</span>
+              </div>
+              <div class="p-modal-chip">
+                <strong>0.00 PPM Hexane</strong>
+                <span>Zero chemicals</span>
+              </div>
+              <div class="p-modal-chip">
+                <strong>Weekly Batch</strong>
+                <span>Direct farm fresh</span>
+              </div>
+            </div>
+
+            <!-- Full Stage Scroll / Deep Dive Link -->
+            <div class="p-modal-footer-nav">
+              <a href="javascript:void(0)" class="p-modal-deepdive-link" onclick="scrollToOilStage()">
+                <span>Scroll to Complete Detailed Specifications</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <polyline points="19 12 12 19 5 12"></polyline>
+                </svg>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================================================================
+         MONUMENTAL PRODUCT SHOWCASE LIST (Deep-Dive Cutout Bottle Stages)
+         =================================================================== -->
+    <div class="p-monument-list" id="monumental-stages">
+      {% assign oil_collection = collections['cold-pressed-oils'] %}
+      {% if oil_collection == blank or oil_collection.products.size == 0 %}
+        {% assign oil_collection = collections['all'] %}
+      {% endif %}
+
+      {% if oil_collection and oil_collection.products.size > 0 %}
+        {% for product in oil_collection.products %}
+          {% assign clean_img = product.featured_image | image_url: width: 800 %}
+          {% assign half_img = product.featured_image | image_url: width: 800 %}
+          {% assign t_lower = product.title | downcase %}
+          {% assign oil_theme = 'peanut' %}
+          {% assign tasting_notes = 'Golden Amber Hue · Roasted Nutty Fragrance · 230°C Smoke Point' %}
+          {% assign origin_story = 'Slow-crushed from select Saurashtra peanuts in traditional botanical Vaagai mortars. Retains natural phytosterols, heart-healthy MUFA, and deep traditional aroma.' %}
+          {% assign smoke_point = '230°C High Heat' %}
+          {% assign fatty_profile = 'Rich in MUFA & Resveratrol' %}
+
+          {% if t_lower contains 'sunflower' %}
+            {% assign clean_img = 'purathana-sunflower-front.jpg' | asset_url %}
+            {% assign half_img = 'purathana-half-sunflower.png' | asset_url %}
+            {% assign back_img = 'purathana-sunflower-back.jpg' | asset_url %}
+            {% assign oil_theme = 'sunflower' %}
+            {% assign card_tagline = 'Light, healthy, heart friendly.' %}
+            {% assign tasting_notes = 'Bright Sunlit Gold · Delicate Crisp Finish · High Vitamin E' %}
+            {% assign origin_story = 'Cold-pressed from select sun-drenched native sunflower seeds. Retains delicate natural aroma, high polyunsaturated fats (PUFA), and zero synthetic additives.' %}
+            {% assign smoke_point = '225°C Sauté & Bake' %}
+            {% assign fatty_profile = 'High PUFA & Tocopherols' %}
+          {% elsif t_lower contains 'sesame' or t_lower contains 'gingelly' %}
+            {% assign clean_img = 'purathana-sesame-front.jpg' | asset_url %}
+            {% assign half_img = 'purathana-half-sesame.png' | asset_url %}
+            {% assign back_img = 'purathana-sesame-back.jpg' | asset_url %}
+            {% assign oil_theme = 'sesame' %}
+            {% assign card_tagline = 'Small seeds, big benefits.' %}
+            {% assign tasting_notes = 'Deep Ruby-Amber · Toasted Earthy Depth · Traditional Palm Jaggery' %}
+            {% assign origin_story = 'Crushed from indigenous black sesame seeds with authentic palm jaggery in traditional Vaagai mortars. The ancient superfood for modern living, rich in sesamol and zinc.' %}
+            {% assign smoke_point = '210°C Deep Sauté' %}
+            {% assign fatty_profile = 'Active Sesamol & Zinc' %}
+          {% elsif t_lower contains 'coconut' %}
+            {% assign clean_img = 'purathana-coconut-front.jpg' | asset_url %}
+            {% assign half_img = 'purathana-half-coconut.png' | asset_url %}
+            {% assign back_img = 'purathana-coconut-back.jpg' | asset_url %}
+            {% assign oil_theme = 'coconut' %}
+            {% assign card_tagline = 'Pure by nature, perfect for you.' %}
+            {% assign tasting_notes = 'Silky Crystal Clarity · Sweet Copra Aroma · 62% Lauric Acid MCTs' %}
+            {% assign origin_story = 'Extracted from natural sun-dried sulfur-free copra along coastal groves. Pure and natural for cooking, health & vitality, packed with active lauric acid.' %}
+            {% assign smoke_point = '177°C Raw & Low Heat' %}
+            {% assign fatty_profile = '62% Medium Chain MCTs' %}
+          {% elsif t_lower contains 'groundnut' or t_lower contains 'peanut' %}
+            {% assign clean_img = 'purathana-groundnut-front.jpg' | asset_url %}
+            {% assign half_img = 'purathana-half-groundnut.jpg' | asset_url %}
+            {% assign back_img = 'purathana-groundnut-back.jpg' | asset_url %}
+            {% assign oil_theme = 'groundnut' %}
+            {% assign card_tagline = 'Rich in taste, full of goodness.' %}
+            {% assign tasting_notes = 'Golden Amber Hue · Roasted Nutty Fragrance · 230°C Smoke Point' %}
+            {% assign origin_story = 'Slow-crushed from select Saurashtra peanuts in traditional botanical Vaagai mortars. Cold pressed goodness for everyday cooking, rich in natural phytosterols.' %}
+            {% assign smoke_point = '230°C High Heat' %}
+            {% assign fatty_profile = 'Heart-Healthy MUFA' %}
+          {% elsif t_lower contains 'mustard' or t_lower contains 'musturd' %}
+            {% assign clean_img = 'purathana-mustard-front.jpg' | asset_url %}
+            {% assign half_img = 'purathana-half-mustard.png' | asset_url %}
+            {% assign back_img = 'purathana-mustard-back.jpg' | asset_url %}
+            {% assign oil_theme = 'mustard' %}
+            {% assign card_tagline = 'Bold flavour, stronger health.' %}
+            {% assign tasting_notes = 'Pungent Golden Kick · Rich Sinigrin & Allyl · Natural Antimicrobial' %}
+            {% assign origin_story = 'Strong, pure, perfect for authentic flavour. Extracted from high-grade whole black mustard seeds in a pure mechanical press with zero chemical additives.' %}
+            {% assign smoke_point = '250°C Highest Heat' %}
+            {% assign fatty_profile = 'Allyl Isothiocyanate Active' %}
+          {% endif %}
+
+          <article class="p-monument-stage {% cycle 'p-layout-left', 'p-layout-right' %} theme-{{ oil_theme }}" 
+                   id="product-stage-{{ product.id }}"
+                   data-oil-handle="{{ product.handle }}"
+                   data-product-id="{{ product.id }}">
+            
+            <div class="p-monument-inner">
+              
+              <!-- 50% Screen Width: The Monumental Cutout Bottle Stage -->
+              <div class="p-monument-bottle-col">
+                <div class="p-monument-pedestal" id="pedestal-{{ product.id }}">
+                  <div class="p-monument-glow glow-{{ oil_theme }}"></div>
+                  <div class="p-monument-specular-glare"></div>
+
+                  <div class="p-monument-bottle-wrap" id="bottle-wrap-{{ product.id }}" onclick="toggleBottleLabel('{{ product.id }}')" style="cursor:pointer;" title="Click to view back label & nutrition facts">
+                    <img src="{{ half_img }}" 
+                         alt="{{ product.title | escape }}" 
+                         class="p-monument-bottle-img" 
+                         id="img-front-{{ product.id }}"
+                         loading="lazy" />
+                    <img src="{{ back_img }}" 
+                         alt="{{ product.title | escape }} Nutritional Label" 
+                         class="p-monument-bottle-img" 
+                         id="img-back-{{ product.id }}"
+                         style="display:none;" 
+                         loading="lazy" />
+                  </div>
+
+                  <div class="p-monument-ground-shadow"></div>
+
+                  <div class="p-monument-floating-stamp">
+                    <span class="p-stamp-dot"></span>
+                    <span>14 RPM VAAGAI MORTAR</span>
+                  </div>
+
+                  <button type="button" 
+                          class="p-monument-flip-trigger" 
+                          onclick="toggleBottleLabel('{{ product.id }}')"
+                          title="View Nutritional Facts & Certification">
+                    <span id="flip-btn-text-{{ product.id }}">View Nutritional Facts</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- 50% Screen Width: Scroll-Revealed Details -->
+              <div class="p-monument-details-col">
+                <div class="p-monument-details-box">
+                  
+                  <div class="p-monument-eyebrow-row">
+                    <span class="p-monument-badge">RESERVE HARVEST · STEP 0{{ forloop.index }}</span>
+                    <span class="p-monument-smoke-tag">{{ smoke_point }}</span>
+                  </div>
+
+                  <h3 class="p-monument-title">
+                    {{ product.title }}
+                  </h3>
+
+                  <div class="p-monument-subheading-tagline">
+                    {{ card_tagline }}
+                  </div>
+
+                  <div class="p-monument-tasting-banner">
+                    <span class="p-tasting-pill">{{ tasting_notes }}</span>
+                  </div>
+
+                  <p class="p-monument-story">
+                    {{ origin_story }}
+                  </p>
+
+                  <!-- Visual Purity Badges -->
+                  <div class="p-monument-chips-grid">
+                    <div class="p-monument-chip">
+                      <span class="p-chip-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                      </span>
+                      <div class="p-chip-text">
+                        <strong>Vaagai Wood</strong>
+                        <span>Mortar crushed</span>
+                      </div>
+                    </div>
+                    <div class="p-monument-chip">
+                      <span class="p-chip-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"></path></svg>
+                      </span>
+                      <div class="p-chip-text">
+                        <strong>&lt; 38°C Cold</strong>
+                        <span>Enzymes intact</span>
+                      </div>
+                    </div>
+                    <div class="p-monument-chip">
+                      <span class="p-chip-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                      </span>
+                      <div class="p-chip-text">
+                        <strong>0.00 PPM Hexane</strong>
+                        <span>Zero chemicals</span>
+                      </div>
+                    </div>
+                    <div class="p-monument-chip">
+                      <span class="p-chip-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 3"></path></svg>
+                      </span>
+                      <div class="p-chip-text">
+                        <strong>Fresh Weekly</strong>
+                        <span>Zero aged stock</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Volume & Packaging Variant Selector -->
+                  <div class="p-monument-variant-wrap">
+                    <div class="p-variant-label-row">
+                      <span class="p-variant-label">SELECT VOLUME &amp; PACKAGING:</span>
+                      <span class="p-variant-subtext">{{ fatty_profile }}</span>
+                    </div>
+                    <div class="p-monument-pills-row">
+                      {% for variant in product.variants %}
+                        {% assign v_title = variant.title %}
+                        {% assign is_canister = false %}
+                        {% assign is_half = false %}
+                        {% if v_title contains '5L' or v_title contains '5 Litre' or v_title contains '5000' %}
+                          {% assign is_canister = true %}
+                        {% endif %}
+                        {% if v_title contains '500' or v_title contains 'Half' %}
+                          {% assign is_half = true %}
+                        {% endif %}
+                        <button type="button" 
+                                class="p-monument-pill {% if forloop.first %}active{% endif %} {% if is_canister %}is-canister{% endif %}" 
+                                data-product-id="{{ product.id }}"
+                                data-variant-id="{{ variant.id }}"
+                                data-price="{{ variant.price | money }}"
+                                data-raw-price="{{ variant.price }}"
+                                data-img-src="{% if is_half %}{{ half_img }}{% else %}{{ clean_img }}{% endif %}"
+                                onclick="onMonumentPillSelect(this)">
+                          <span class="p-pill-vname">{{ variant.title }}</span>
+                          <span class="p-pill-vprice">{{ variant.price | money }}</span>
+                          {% if is_canister %}
+                            <span class="p-canister-badge">BEST VALUE</span>
+                          {% endif %}
+                        </button>
+                      {% endfor %}
+                    </div>
+                  </div>
+
+                  <!-- Footer Action Zone: Real-Time Price + Add to Bag -->
+                  <div class="p-monument-action-bar">
+                    <div class="p-monument-price-box">
+                      <div class="p-monument-price" id="monument_price_{{ product.id }}">
+                        {{ product.price | money }}
+                      </div>
+                      <div class="p-monument-tax-sub">Tax Included · Free Dispatch on ₹799+</div>
+                    </div>
+
+                    <div class="p-monument-btn-group">
+                      <button type="button" 
+                              class="p-monument-add-btn" 
+                              id="btn_monument_add_{{ product.id }}"
+                              onclick="addMonumentVariantToBag('{{ product.id }}')">
+                        <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                          <line x1="3" y1="6" x2="21" y2="6"></line>
+                          <path d="M16 10a4 4 0 0 1-8 0"></path>
+                        </svg>
+                        <span>Add to Bag</span>
+                      </button>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+          </article>
+        {% endfor %}
+      {% endif %}
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================================================================
+     CLIENT DATA REPOSITORY FOR MODAL POPULATION
+     =================================================================== -->
+<script>
+window.PURATHANA_CATALOG_DATA = {
+  groundnut: {
+    handle: "cold-pressed-groundnut-oil",
+    title: "Cold Pressed Groundnut Oil",
+    tagline: "Rich in taste, full of goodness.",
+    tasting: "Golden Amber Hue · Roasted Nutty Fragrance · 230°C Smoke Point",
+    halfImg: "{{ 'purathana-half-groundnut.jpg' | asset_url }}",
+    frontImg: "{{ 'purathana-groundnut-front.jpg' | asset_url }}",
+    backImg: "{{ 'purathana-groundnut-back.jpg' | asset_url }}",
+    variants: [
+      { id: 46538100506721, title: "Half Litre Bottle (500ml)", price: "₹195.00", isHalf: true },
+      { id: 46534136660065, title: "1 Litre Bottle", price: "₹380.00", isHalf: false },
+      { id: 46534136725601, title: "Loose Oil Refill (1L)", price: "₹340.00", isHalf: false },
+      { id: 46534136692833, title: "5 Litre Value Can", price: "₹1,750.00", isCanister: true, isHalf: false }
+    ]
+  },
+  mustard: {
+    handle: "cold-pressed-mustard-oil",
+    title: "Cold Pressed Mustard Oil",
+    tagline: "Bold flavour, stronger health.",
+    tasting: "Pungent Golden Kick · Rich Sinigrin & Allyl · 250°C Highest Heat",
+    halfImg: "{{ 'purathana-half-mustard.png' | asset_url }}",
+    frontImg: "{{ 'purathana-mustard-front.jpg' | asset_url }}",
+    backImg: "{{ 'purathana-mustard-back.jpg' | asset_url }}",
+    variants: [
+      { id: 46538100539489, title: "Half Litre Bottle (500ml)", price: "₹198.00", isHalf: true },
+      { id: 46534136758369, title: "1 Litre Bottle", price: "₹386.00", isHalf: false },
+      { id: 46534136823905, title: "Loose Oil Refill (1L)", price: "₹330.00", isHalf: false },
+      { id: 46534136791137, title: "5 Litre Value Can", price: "₹1,790.00", isCanister: true, isHalf: false }
+    ]
+  },
+  coconut: {
+    handle: "cold-pressed-coconut-oil",
+    title: "Cold Pressed Coconut Oil",
+    tagline: "Pure by nature, perfect for you.",
+    tasting: "Silky Crystal Clarity · Sweet Sun-dried Copra Aroma · 62% Lauric Acid MCTs",
+    halfImg: "{{ 'purathana-half-coconut.png' | asset_url }}",
+    frontImg: "{{ 'purathana-coconut-front.jpg' | asset_url }}",
+    backImg: "{{ 'purathana-coconut-back.jpg' | asset_url }}",
+    variants: [
+      { id: 46534136856673, title: "Half Litre Bottle (500ml)", price: "₹380.00", isHalf: true },
+      { id: 46534136889441, title: "1 Litre Bottle", price: "₹760.00", isHalf: false },
+      { id: 46534136954977, title: "Loose Oil Refill (1L)", price: "₹720.00", isHalf: false },
+      { id: 46534136922209, title: "5 Litre Value Can", price: "₹3,900.00", isCanister: true, isHalf: false }
+    ]
+  },
+  sesame: {
+    handle: "cold-pressed-sesame-oil-gingelly",
+    title: "Cold Pressed Sesame Oil (Gingelly)",
+    tagline: "Small seeds, big benefits.",
+    tasting: "Deep Ruby-Amber · Toasted Earthy Depth · Traditional Palm Jaggery",
+    halfImg: "{{ 'purathana-half-sesame.png' | asset_url }}",
+    frontImg: "{{ 'purathana-sesame-front.jpg' | asset_url }}",
+    backImg: "{{ 'purathana-sesame-back.jpg' | asset_url }}",
+    variants: [
+      { id: 46538100637793, title: "Half Litre Bottle (500ml)", price: "₹245.00", isHalf: true },
+      { id: 46534136987745, title: "1 Litre Bottle", price: "₹480.00", isHalf: false },
+      { id: 46534137053281, title: "Loose Oil Refill (1L)", price: "₹430.00", isHalf: false },
+      { id: 46534137020513, title: "5 Litre Value Can", price: "₹2,260.00", isCanister: true, isHalf: false }
+    ]
+  },
+  sunflower: {
+    handle: "cold-pressed-sunflower-oil",
+    title: "Cold Pressed Sunflower Oil",
+    tagline: "Light, healthy, heart friendly.",
+    tasting: "Bright Sunlit Gold · Delicate Crisp Finish · High Vitamin E & PUFA",
+    halfImg: "{{ 'purathana-half-sunflower.png' | asset_url }}",
+    frontImg: "{{ 'purathana-sunflower-front.jpg' | asset_url }}",
+    backImg: "{{ 'purathana-sunflower-back.jpg' | asset_url }}",
+    variants: [
+      { id: 46538100670561, title: "Half Litre Bottle (500ml)", price: "₹195.00", isHalf: true },
+      { id: 46534137086049, title: "1 Litre Bottle", price: "₹380.00", isHalf: false },
+      { id: 46534137151585, title: "Loose Oil Refill (1L)", price: "₹340.00", isHalf: false },
+      { id: 46534137118817, title: "5 Litre Value Can", price: "₹1,750.00", isCanister: true, isHalf: false }
+    ]
+  }
+};
+
+let currentModalOil = null;
+let currentModalVariantId = null;
+
+// Open Interactive Product Inspection Modal
+function openProductModal(oilKey) {
+  const data = window.PURATHANA_CATALOG_DATA[oilKey];
+  if (!data) return;
+  currentModalOil = oilKey;
+
+  const backdrop = document.getElementById('p-product-modal-backdrop');
+  const titleEl = document.getElementById('p-modal-title');
+  const taglineEl = document.getElementById('p-modal-tagline');
+  const tastingEl = document.getElementById('p-modal-tasting');
+  const frontImg = document.getElementById('p-modal-bottle-front');
+  const backImg = document.getElementById('p-modal-bottle-back');
+  const flipText = document.getElementById('p-modal-flip-text');
+  const pillsRow = document.getElementById('p-modal-pills-row');
+  const priceEl = document.getElementById('p-modal-price');
+  const activeLabel = document.getElementById('p-modal-active-label');
+
+  if (titleEl) titleEl.textContent = data.title;
+  if (taglineEl) taglineEl.textContent = data.tagline;
+  if (tastingEl) tastingEl.textContent = data.tasting;
+  
+  // Set default images
+  if (frontImg) {
+    frontImg.src = data.halfImg;
+    frontImg.style.display = 'block';
+  }
+  if (backImg) {
+    backImg.src = data.backImg;
+    backImg.style.display = 'none';
+  }
+  if (flipText) flipText.textContent = 'View Nutritional Facts';
+
+  // Populate Variant Pills
+  if (pillsRow) {
+    pillsRow.innerHTML = '';
+    data.variants.forEach((v, idx) => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'p-modal-pill' + (idx === 0 ? ' active' : '') + (v.isCanister ? ' is-canister' : '');
+      btn.dataset.variantId = v.id;
+      btn.dataset.price = v.price;
+      btn.dataset.isHalf = v.isHalf ? 'true' : 'false';
+      btn.dataset.vtitle = v.title;
+      
+      btn.innerHTML = `
+        <span class="p-modal-pill-name">${v.title}</span>
+        <span class="p-modal-pill-price">${v.price}</span>
+        ${v.isCanister ? '<span class="p-modal-canister-badge">BEST VALUE</span>' : ''}
+      `;
+      btn.onclick = function() { onModalPillSelect(btn, data); };
+      pillsRow.appendChild(btn);
+
+      if (idx === 0) {
+        currentModalVariantId = v.id;
+        if (priceEl) priceEl.textContent = v.price;
+        if (activeLabel) activeLabel.textContent = v.title;
+      }
+    });
+  }
+
+  if (backdrop) {
+    backdrop.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+function closeProductModal() {
+  const backdrop = document.getElementById('p-product-modal-backdrop');
+  if (backdrop) {
+    backdrop.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+}
+
+// Select Modal Variant Pill
+function onModalPillSelect(btn, data) {
+  const pillsRow = document.getElementById('p-modal-pills-row');
+  if (pillsRow) {
+    pillsRow.querySelectorAll('.p-modal-pill').forEach(p => p.classList.remove('active'));
+  }
+  btn.classList.add('active');
+
+  currentModalVariantId = btn.dataset.variantId;
+  const priceEl = document.getElementById('p-modal-price');
+  const activeLabel = document.getElementById('p-modal-active-label');
+  const frontImg = document.getElementById('p-modal-bottle-front');
+
+  if (priceEl) priceEl.textContent = btn.dataset.price;
+  if (activeLabel) activeLabel.textContent = btn.dataset.vtitle;
+
+  // Swap front image between 500ml and 1L bottle
+  if (frontImg) {
+    if (btn.dataset.isHalf === 'true') {
+      frontImg.src = data.halfImg;
+    } else {
+      frontImg.src = data.frontImg;
+    }
+  }
+}
+
+// Toggle Front/Back Bottle Label in Modal
+function toggleModalBottleLabel() {
+  const front = document.getElementById('p-modal-bottle-front');
+  const back = document.getElementById('p-modal-bottle-back');
+  const flipText = document.getElementById('p-modal-flip-text');
+  if (!front || !back) return;
+
+  if (front.style.display === 'none') {
+    front.style.display = 'block';
+    back.style.display = 'none';
+    if (flipText) flipText.textContent = 'View Nutritional Facts';
+  } else {
+    front.style.display = 'none';
+    back.style.display = 'block';
+    if (flipText) flipText.textContent = 'View Front Bottle';
+  }
+}
+
+// Add Modal Variant To Bag via AJAX
+function addModalVariantToBag() {
+  if (!currentModalVariantId) return;
+  const addBtn = document.getElementById('p-modal-add-btn');
+  const addText = document.getElementById('p-modal-add-text');
+  if (!addBtn) return;
+
+  const origText = addText ? addText.textContent : 'Add to Bag';
+  if (addText) addText.textContent = 'Adding...';
+  addBtn.disabled = true;
+
+  fetch('/cart/add.js', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ id: currentModalVariantId, quantity: 1 })
+  })
+  .then(res => res.json())
+  .then(data => {
+    if (addText) addText.textContent = 'Added to Bag ✓';
+    setTimeout(() => {
+      if (addText) addText.textContent = origText;
+      addBtn.disabled = false;
+      closeProductModal();
+    }, 900);
+    document.dispatchEvent(new CustomEvent('cart:refresh', { bubbles: true }));
+  })
+  .catch(err => {
+    console.error('Add to bag error:', err);
+    if (addText) addText.textContent = origText;
+    addBtn.disabled = false;
+  });
+}
+
+// Scroll directly to the Monument stage for this oil
+function scrollToOilStage() {
+  closeProductModal();
+  if (!currentModalOil) return;
+  const data = window.PURATHANA_CATALOG_DATA[currentModalOil];
+  if (!data) return;
+  const stage = document.querySelector(`.p-monument-stage[data-oil-handle="${data.handle}"]`);
+  if (stage) {
+    stage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+}
+
+// Monument Stage Logic (Scroll Reveals, 3D Tilt, Live Variant Selection)
+function initScrollReveals() {
+  const stages = document.querySelectorAll('.p-monument-stage');
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-revealed');
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    stages.forEach(st => observer.observe(st));
+  } else {
+    stages.forEach(st => st.classList.add('is-revealed'));
+  }
+}
+
+function initMonument3DTilt() {
+  const pedestals = document.querySelectorAll('.p-monument-pedestal');
+  pedestals.forEach(ped => {
+    if (ped.dataset.tiltReady) return;
+    ped.dataset.tiltReady = 'true';
+
+    const bottleWrap = ped.querySelector('.p-monument-bottle-wrap');
+    if (!bottleWrap) return;
+
+    let rotX = 0, rotY = 0, targetX = 0, targetY = 0;
+    let isTracking = false, rafId = null;
+
+    function loop() {
+      rotX += (targetX - rotX) * 0.14;
+      rotY += (targetY - rotY) * 0.14;
+      bottleWrap.style.transform = `perspective(1000px) rotateX(${rotX.toFixed(2)}deg) rotateY(${rotY.toFixed(2)}deg) scale3d(1.025, 1.025, 1.025)`;
+      const diff = Math.abs(targetX - rotX) + Math.abs(targetY - rotY);
+      if (isTracking || diff > 0.01) {
+        rafId = requestAnimationFrame(loop);
+      } else {
+        rafId = null;
+        if (!isTracking) {
+          bottleWrap.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+        }
+      }
+    }
+
+    function updateCoords(clientX, clientY) {
+      const rect = ped.getBoundingClientRect();
+      const x = clientX - rect.left;
+      const y = clientY - rect.top;
+      const midX = rect.width / 2;
+      const midY = rect.height / 2;
+      targetX = ((y - midY) / midY) * -12;
+      targetY = ((x - midX) / midX) * 12;
+      ped.style.setProperty('--mouse-x', `${x}px`);
+      ped.style.setProperty('--mouse-y', `${y}px`);
+      if (!rafId) rafId = requestAnimationFrame(loop);
+    }
+
+    ped.addEventListener('mouseenter', () => { isTracking = true; if (!rafId) rafId = requestAnimationFrame(loop); });
+    ped.addEventListener('mousemove', e => { isTracking = true; updateCoords(e.clientX, e.clientY); });
+    ped.addEventListener('mouseleave', () => { isTracking = false; targetX = 0; targetY = 0; if (!rafId) rafId = requestAnimationFrame(loop); });
+  });
+}
+
+function toggleBottleLabel(productId) {
+  const front = document.getElementById('img-front-' + productId);
+  const back = document.getElementById('img-back-' + productId);
+  const btnText = document.getElementById('flip-btn-text-' + productId);
+  if (!front || !back) return;
+  if (front.style.display === 'none') {
+    front.style.display = 'block';
+    back.style.display = 'none';
+    if (btnText) btnText.textContent = 'View Nutritional Facts';
+  } else {
+    front.style.display = 'none';
+    back.style.display = 'block';
+    if (btnText) btnText.textContent = 'View Front Bottle';
+  }
+}
+
+function onMonumentPillSelect(btn) {
+  const productId = btn.dataset.productId;
+  const variantId = btn.dataset.variantId;
+  const priceFormatted = btn.dataset.price;
+  const imgSrc = btn.dataset.imgSrc;
+  const stage = document.getElementById('product-stage-' + productId);
+  if (!stage) return;
+
+  stage.querySelectorAll('.p-monument-pill').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+
+  const priceEl = document.getElementById('monument_price_' + productId);
+  if (priceEl) priceEl.textContent = priceFormatted;
+
+  const addBtn = document.getElementById('btn_monument_add_' + productId);
+  if (addBtn) addBtn.dataset.activeVariantId = variantId;
+
+  if (imgSrc) {
+    const frontImg = document.getElementById('img-front-' + productId);
+    if (frontImg) frontImg.src = imgSrc;
+  }
+}
+
+function addMonumentVariantToBag(productId) {
+  const stage = document.getElementById('product-stage-' + productId);
+  if (!stage) return;
+  const activePill = stage.querySelector('.p-monument-pill.active');
+  const variantId = activePill ? activePill.dataset.variantId : null;
+  const btn = document.getElementById('btn_monument_add_' + productId);
+  if (!variantId || !btn) return;
+
+  const origHtml = btn.innerHTML;
+  btn.innerHTML = '<span>Adding...</span>';
+  btn.disabled = true;
+
+  fetch('/cart/add.js', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ id: variantId, quantity: 1 })
+  })
+  .then(res => res.json())
+  .then(data => {
+    btn.innerHTML = '<span>Added ✓</span>';
+    setTimeout(() => {
+      btn.innerHTML = origHtml;
+      btn.disabled = false;
+    }, 1200);
+    document.dispatchEvent(new CustomEvent('cart:refresh', { bubbles: true }));
+  })
+  .catch(err => {
+    console.error('Add to bag error:', err);
+    btn.innerHTML = origHtml;
+    btn.disabled = false;
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  initScrollReveals();
+  initMonument3DTilt();
+});
+if (document.readyState === 'complete' || document.readyState === 'interactive') {
+  setTimeout(() => {
+    initScrollReveals();
+    initMonument3DTilt();
+  }, 100);
+}
+</script>
+
+<style>
+/* Section Base & Flanking Leaves */
+.p-catalog-section {
+  padding: 5rem 0 6rem;
+  background: var(--p-bg-canvas, #FAF5EB);
+  position: relative;
+  overflow: hidden;
+}
+
+.p-catalog-leaf {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.88;
+}
+
+.p-catalog-leaf-left {
+  top: 60px;
+  left: -20px;
+  width: clamp(140px, 14vw, 220px);
+  height: auto;
+}
+
+.p-catalog-leaf-right {
+  top: 140px;
+  right: -25px;
+  width: clamp(140px, 15vw, 230px);
+  height: auto;
+}
+
+.p-catalog-section .p-section-heading {
+  text-align: center;
+  margin-bottom: 3.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.p-eyebrow {
+  font-family: var(--p-font-sans, system-ui);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #28422D;
+  margin-bottom: 0.5rem;
+}
+
+.p-section-title {
+  font-family: 'Marcellus', Georgia, serif;
+  font-size: clamp(2rem, 3.8vw, 3.2rem);
+  font-weight: 500;
+  color: #24221E;
+  margin: 0 0 0.75rem;
+  letter-spacing: -0.01em;
+}
+
+.p-section-sub {
+  font-size: 1rem;
+  color: rgba(36, 34, 30, 0.76);
+  max-width: 600px;
+  margin-inline: auto;
+  line-height: 1.6;
+}
+
+/* ===================================================================
+   5 MOCKUP PASTEL INGREDIENT CARDS
+   =================================================================== */
+.p-mockup-cards-wrap {
+  margin-bottom: 5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.p-mockup-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.25rem;
+  width: 100%;
+}
+
+/* Individual Mockup Pastel Card */
+.p-mock-card {
+  border-radius: 18px;
+  padding: 1.5rem 1rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
+  min-height: 420px;
+  border: 1px solid rgba(40, 66, 45, 0.1);
+  box-shadow: 0 8px 24px rgba(36, 34, 30, 0.04);
+}
+
+.p-mock-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 36px rgba(36, 34, 30, 0.1);
+}
+
+/* Card Specific Pastel Colors from Mockup */
+.p-mock-card-groundnut {
+  background-color: #F5E6D3;
+}
+.p-mock-card-mustard {
+  background-color: #EDE0C8;
+}
+.p-mock-card-coconut {
+  background-color: #E5EDE5;
+}
+.p-mock-card-sesame {
+  background-color: #EAE0EB;
+}
+.p-mock-card-sunflower {
+  background-color: #F6EDCE;
+}
+
+.p-mock-card-header {
+  margin-bottom: 1rem;
+  z-index: 3;
+  position: relative;
+}
+
+.p-mock-card-title {
+  font-family: 'Marcellus', Georgia, serif;
+  font-size: 1.35rem;
+  color: #24221E;
+  margin: 0 0 0.3rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.p-mock-card-tagline {
+  font-family: var(--p-font-sans, system-ui);
+  font-size: 0.78rem;
+  color: rgba(36, 34, 30, 0.7);
+  margin: 0;
+  line-height: 1.35;
+  font-style: italic;
+}
+
+/* Ingredient Bowl Photography */
+.p-mock-card-dish-wrap {
+  width: 100%;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  position: relative;
+  z-index: 3;
+}
+
+.p-mock-card-dish-img {
+  max-width: 90%;
+  max-height: 155px;
+  object-fit: contain;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  filter: drop-shadow(0 6px 12px rgba(36, 34, 30, 0.15));
+}
+
+.p-mock-card:hover .p-mock-card-dish-img {
+  transform: scale(1.06);
+}
+
+/* Shop Now Button */
+.p-mock-card-btn-wrap {
+  margin-top: auto;
+  margin-bottom: 0.75rem;
+  position: relative;
+  z-index: 3;
+}
+
+.p-mock-shop-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: #28422D;
+  color: #FAF5EB;
+  border: none;
+  border-radius: 9999px;
+  padding: 0.6rem 1.25rem;
+  font-family: var(--p-font-sans, system-ui);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(40, 66, 45, 0.25);
+}
+
+.p-mock-shop-btn:hover {
+  background: #1B2F1F;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(40, 66, 45, 0.35);
+}
+
+/* Vintage Bottom Etching Sketch */
+.p-mock-card-etching-wrap {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  opacity: 0.65;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+.p-mock-card-etching-img {
+  max-width: 85%;
+  max-height: 65px;
+  object-fit: contain;
+}
+
+/* ===================================================================
+   INTERACTIVE PRODUCT INSPECTION MODAL
+   =================================================================== */
+.p-product-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(26, 28, 26, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.p-product-modal-backdrop.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.p-product-modal-content {
+  background: #FAF5EB;
+  border-radius: 24px;
+  max-width: 920px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(40, 66, 45, 0.18);
+  padding: 2.25rem 2.5rem;
+  transform: translateY(20px) scale(0.98);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.p-product-modal-backdrop.active .p-product-modal-content {
+  transform: translateY(0) scale(1);
+}
+
+.p-modal-close-btn {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid rgba(40, 66, 45, 0.2);
+  background: rgba(255, 255, 255, 0.75);
+  color: #24221E;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.p-modal-close-btn:hover {
+  background: #28422D;
+  color: #FAF5EB;
+}
+
+.p-modal-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.p-modal-media-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(40, 66, 45, 0.03);
+  border-radius: 20px;
+  padding: 1.75rem 1.25rem;
+  border: 1px solid rgba(40, 66, 45, 0.08);
+}
+
+.p-modal-badge-row {
+  margin-bottom: 0.75rem;
+}
+
+.p-modal-tag {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #28422D;
+  background: rgba(40, 66, 45, 0.08);
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+  text-transform: uppercase;
+}
+
+.p-modal-bottle-container {
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.p-modal-bottle-img {
+  max-height: 275px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 24px rgba(36, 34, 30, 0.16));
+}
+
+.p-modal-flip-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: #FAF5EB;
+  border: 1px solid rgba(40, 66, 45, 0.25);
+  padding: 0.45rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #28422D;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.p-modal-flip-btn:hover {
+  background: #28422D;
+  color: #FAF5EB;
+}
+
+.p-modal-step {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: #28422D;
+  text-transform: uppercase;
+}
+
+.p-modal-title {
+  font-family: 'Marcellus', Georgia, serif;
+  font-size: clamp(1.6rem, 2.5vw, 2.1rem);
+  color: #24221E;
+  margin: 0.25rem 0 0.35rem;
+  line-height: 1.2;
+}
+
+.p-modal-tagline {
+  font-family: var(--p-font-sans, system-ui);
+  font-size: 0.9rem;
+  color: #28422D;
+  font-style: italic;
+  margin: 0 0 0.5rem;
+}
+
+.p-modal-tasting {
+  font-size: 0.8rem;
+  color: rgba(36, 34, 30, 0.75);
+  background: rgba(40, 66, 45, 0.05);
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  margin: 0 0 1.25rem;
+  display: inline-block;
+}
+
+.p-modal-var-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #24221E;
+  margin-bottom: 0.5rem;
+}
+
+.p-modal-active-label {
+  color: #28422D;
+  font-weight: 600;
+}
+
+.p-modal-pills-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.p-modal-pill {
+  border: 1.5px solid rgba(40, 66, 45, 0.2);
+  background: #FAF5EB;
+  border-radius: 10px;
+  padding: 0.65rem 0.85rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+
+.p-modal-pill.active {
+  border-color: #28422D;
+  background: #28422D;
+  color: #FAF5EB;
+}
+
+.p-modal-pill-name {
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.p-modal-pill-price {
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-top: 0.15rem;
+  color: #28422D;
+}
+
+.p-modal-pill.active .p-modal-pill-price {
+  color: #FAF5EB;
+}
+
+.p-modal-canister-badge {
+  position: absolute;
+  top: -6px;
+  right: 6px;
+  background: #C4782A;
+  color: #FFFFFF;
+  font-size: 0.55rem;
+  font-weight: 700;
+  padding: 0.12rem 0.4rem;
+  border-radius: 9999px;
+  letter-spacing: 0.06em;
+}
+
+.p-modal-action-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(40, 66, 45, 0.14);
+  margin-bottom: 1.25rem;
+}
+
+.p-modal-price {
+  font-family: 'Marcellus', Georgia, serif;
+  font-size: 1.75rem;
+  color: #24221E;
+  font-weight: 600;
+}
+
+.p-modal-tax-note {
+  font-size: 0.68rem;
+  color: rgba(36, 34, 30, 0.65);
+}
+
+.p-modal-add-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #28422D;
+  color: #FAF5EB;
+  border: none;
+  border-radius: 9999px;
+  padding: 0.85rem 2rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(40, 66, 45, 0.28);
+}
+
+.p-modal-add-btn:hover {
+  background: #1C3020;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(40, 66, 45, 0.36);
+}
+
+.p-modal-chips-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.p-modal-chip {
+  background: rgba(40, 66, 45, 0.04);
+  border-radius: 8px;
+  padding: 0.4rem 0.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.p-modal-chip strong {
+  font-size: 0.68rem;
+  color: #24221E;
+}
+
+.p-modal-chip span {
+  font-size: 0.6rem;
+  color: rgba(36, 34, 30, 0.65);
+}
+
+.p-modal-footer-nav {
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.p-modal-deepdive-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #28422D;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+/* ===================================================================
+   MONUMENTAL SHOWCASE STAGES STYLES
+   =================================================================== */
+.p-monument-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4.5rem;
+  margin-top: 2rem;
+}
+
+.p-monument-stage {
+  border-radius: 24px;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(40, 66, 45, 0.1);
+  box-shadow: 0 12px 32px rgba(36, 34, 30, 0.04);
+}
+
+.p-monument-inner {
+  display: flex;
+  align-items: center;
+  gap: 3.5rem;
+}
+
+.p-layout-right .p-monument-inner {
+  flex-direction: row-reverse;
+}
+
+.p-monument-bottle-col {
+  flex: 1;
+  max-width: 50%;
+}
+
+.p-monument-pedestal {
+  position: relative;
+  height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at center, rgba(40, 66, 45, 0.05) 0%, transparent 70%);
+  border-radius: 20px;
+}
+
+.p-monument-bottle-wrap {
+  height: 330px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease-out;
+}
+
+.p-monument-bottle-img {
+  max-height: 320px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 14px 28px rgba(36, 34, 30, 0.16));
+}
+
+.p-monument-ground-shadow {
+  position: absolute;
+  bottom: 20px;
+  width: 140px;
+  height: 14px;
+  background: radial-gradient(ellipse at center, rgba(36, 34, 30, 0.24) 0%, transparent 75%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.p-monument-floating-stamp {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(40, 66, 45, 0.2);
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #28422D;
+}
+
+.p-monument-flip-trigger {
+  position: absolute;
+  bottom: 14px;
+  right: 14px;
+  background: #FAF5EB;
+  border: 1px solid rgba(40, 66, 45, 0.25);
+  padding: 0.35rem 0.8rem;
+  border-radius: 9999px;
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: #28422D;
+  cursor: pointer;
+}
+
+.p-monument-details-col {
+  flex: 1;
+  max-width: 50%;
+}
+
+.p-monument-badge {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: #28422D;
+}
+
+.p-monument-smoke-tag {
+  font-size: 0.68rem;
+  color: rgba(36, 34, 30, 0.7);
+  background: rgba(40, 66, 45, 0.06);
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+  margin-left: 0.75rem;
+}
+
+.p-monument-title {
+  font-family: 'Marcellus', Georgia, serif;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  color: #24221E;
+  margin: 0.4rem 0 0.3rem;
+  line-height: 1.2;
+}
+
+.p-monument-subheading-tagline {
+  font-size: 0.95rem;
+  color: #28422D;
+  font-style: italic;
+  margin-bottom: 0.75rem;
+}
+
+.p-monument-tasting-banner {
+  margin-bottom: 1rem;
+}
+
+.p-tasting-pill {
+  font-size: 0.78rem;
+  color: rgba(36, 34, 30, 0.75);
+  background: rgba(40, 66, 45, 0.05);
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.p-monument-story {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: rgba(36, 34, 30, 0.8);
+  margin-bottom: 1.5rem;
+}
+
+.p-monument-chips-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.p-monument-chip {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  background: rgba(40, 66, 45, 0.04);
+  padding: 0.6rem 0.85rem;
+  border-radius: 10px;
+}
+
+.p-chip-icon {
+  color: #28422D;
+  display: flex;
+}
+
+.p-chip-text strong {
+  display: block;
+  font-size: 0.78rem;
+  color: #24221E;
+}
+
+.p-chip-text span {
+  font-size: 0.68rem;
+  color: rgba(36, 34, 30, 0.65);
+}
+
+.p-monument-variant-wrap {
+  margin-bottom: 1.5rem;
+}
+
+.p-variant-label-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.p-variant-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #24221E;
+}
+
+.p-variant-subtext {
+  font-size: 0.72rem;
+  color: #28422D;
+}
+
+.p-monument-pills-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.65rem;
+}
+
+.p-monument-pill {
+  border: 1.5px solid rgba(40, 66, 45, 0.2);
+  background: #FAF5EB;
+  border-radius: 10px;
+  padding: 0.65rem 0.85rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.p-monument-pill.active {
+  border-color: #28422D;
+  background: #28422D;
+  color: #FAF5EB;
+}
+
+.p-pill-vname {
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.p-pill-vprice {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #28422D;
+}
+
+.p-monument-pill.active .p-pill-vprice {
+  color: #FAF5EB;
+}
+
+.p-canister-badge {
+  position: absolute;
+  top: -6px;
+  right: 6px;
+  background: #C4782A;
+  color: #FFFFFF;
+  font-size: 0.55rem;
+  font-weight: 700;
+  padding: 0.12rem 0.4rem;
+  border-radius: 9999px;
+}
+
+.p-monument-action-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(40, 66, 45, 0.14);
+}
+
+.p-monument-price {
+  font-family: 'Marcellus', Georgia, serif;
+  font-size: 1.75rem;
+  color: #24221E;
+  font-weight: 600;
+}
+
+.p-monument-tax-sub {
+  font-size: 0.68rem;
+  color: rgba(36, 34, 30, 0.65);
+}
+
+.p-monument-add-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #28422D;
+  color: #FAF5EB;
+  border: none;
+  border-radius: 9999px;
+  padding: 0.85rem 2rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(40, 66, 45, 0.28);
+}
+
+.p-monument-add-btn:hover {
+  background: #1C3020;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(40, 66, 45, 0.36);
+}
+
+/* ===================================================================
+   RESPONSIVE DESIGN (Mobile & Tablet Optimization)
+   =================================================================== */
+@media (max-width: 1200px) {
+  .p-mockup-cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 990px) {
+  .p-catalog-section {
+    padding: 3.5rem 0 4.5rem;
+  }
+  .p-mockup-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .p-monument-inner {
+    flex-direction: column !important;
+    gap: 1.5rem;
+  }
+  .p-monument-bottle-col,
+  .p-monument-details-col {
+    max-width: 100%;
+    width: 100%;
+  }
+  .p-modal-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .p-catalog-section {
+    padding: 2.25rem 0 3rem !important;
+  }
+  .p-catalog-leaf-left {
+    top: 20px;
+    width: 90px;
+    left: -15px;
+  }
+  .p-catalog-leaf-right {
+    top: 60px;
+    width: 90px;
+    right: -15px;
+  }
+  .p-catalog-section .p-section-heading {
+    margin-bottom: 1.5rem !important;
+  }
+  .p-section-title {
+    font-size: 1.75rem !important;
+  }
+  .p-section-sub {
+    font-size: 0.85rem !important;
+  }
+
+  /* Horizontal swipe row on mobile for instant frictionless browsing */
+  .p-mockup-cards-wrap {
+    margin-bottom: 2.5rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 1rem;
+    margin-inline: -1rem;
+    padding-inline: 1rem;
+  }
+  .p-mockup-cards-grid {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 0.85rem !important;
+    width: max-content !important;
+  }
+  .p-mock-card {
+    width: 220px !important;
+    min-height: 350px !important;
+    padding: 1.15rem 0.85rem 0.6rem !important;
+    scroll-snap-align: start;
+    flex-shrink: 0;
+  }
+  .p-mock-card-dish-wrap {
+    height: 125px !important;
+    margin-bottom: 0.85rem !important;
+  }
+  .p-mock-card-dish-img {
+    max-height: 120px !important;
+  }
+  .p-mock-card-title {
+    font-size: 1.15rem !important;
+  }
+  .p-mock-card-tagline {
+    font-size: 0.72rem !important;
+  }
+  .p-mock-shop-btn {
+    padding: 0.5rem 1rem !important;
+    font-size: 0.65rem !important;
+  }
+  .p-mock-card-etching-wrap {
+    height: 50px !important;
+  }
+  .p-mock-card-etching-img {
+    max-height: 48px !important;
+  }
+
+  /* Modal Mobile Tweaks */
+  .p-product-modal-content {
+    padding: 1.5rem 1.15rem !important;
+    border-radius: 18px !important;
+  }
+  .p-modal-bottle-container {
+    height: 200px !important;
+  }
+  .p-modal-bottle-img {
+    max-height: 195px !important;
+  }
+  .p-modal-pills-row {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.4rem !important;
+  }
+  .p-modal-chips-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .p-modal-add-btn {
+    padding: 0.75rem 1.25rem !important;
+    font-size: 0.78rem !important;
+  }
+
+  /* Monument Stage Mobile Compaction */
+  .p-monument-pedestal {
+    height: 200px !important;
+  }
+  .p-monument-bottle-wrap {
+    height: 175px !important;
+  }
+  .p-monument-bottle-img {
+    max-height: 170px !important;
+  }
+  .p-monument-chips-grid {
+    display: none !important;
+  }
+  .p-monument-pills-row {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+</style>
+
+{% schema %}
+{
+  "name": "Purathana Catalog",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Purathana Catalog"
+    }
+  ]
+}
+{% endschema %}

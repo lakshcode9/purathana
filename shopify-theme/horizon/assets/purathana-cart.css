@@ -1,0 +1,535 @@
+/* ===================================================================
+   PURATHANA LUXURY BAG & CONVERSION SYSTEM
+   Aesthetic: Apple Bag Precision x Botanical Heritage
+   Clean, architectural, zero clutter.
+   =================================================================== */
+
+/* Backdrop Overlay */
+.p-bag-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(14, 20, 17, 0.42);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 9998;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 350ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.p-bag-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Slide-Over Bag Drawer */
+.p-bag-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 460px;
+  background: #FDF9F2;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -20px 0 50px rgba(47, 41, 35, 0.22);
+  transform: translateX(100%);
+  transition: transform 450ms cubic-bezier(0.16, 1, 0.3, 1);
+  font-family: var(--p-font-sans);
+}
+
+.p-bag-drawer.active {
+  transform: translateX(0);
+}
+
+/* Header */
+.p-bag-header {
+  padding: 1.75rem 2rem 1.25rem;
+  background: #F4E8D2;
+  border-bottom: 1px solid var(--p-border-hairline);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.p-bag-header-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.p-bag-eyebrow {
+  font-family: var(--p-font-sans);
+  font-size: 0.6875rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #7A8060;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.p-bag-title {
+  font-family: 'Marcellus', Georgia, serif;
+  font-size: 1.55rem;
+  font-weight: 400;
+  color: #5A1F22;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.p-bag-count {
+  font-family: var(--p-font-sans);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--p-text-muted);
+  margin-left: 0.35rem;
+}
+
+.p-bag-close-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #5A1F22;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 180ms ease;
+  margin-top: -0.25rem;
+  margin-right: -0.5rem;
+}
+
+.p-bag-close-btn:hover {
+  background: rgba(90, 31, 34, 0.08);
+  color: #5A1F22;
+}
+
+/* Dispatch Meter (Free Delivery at ₹999) */
+.p-bag-dispatch-bar {
+  padding: 1rem 2rem;
+  background: #FDF9F2;
+  border-bottom: 1px solid var(--p-border-hairline);
+}
+
+.p-dispatch-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-size: 0.75rem;
+}
+
+.p-dispatch-label {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-weight: 700;
+  font-size: 0.65rem;
+  color: #7A8060;
+  font-family: var(--p-font-sans);
+}
+
+.p-dispatch-status {
+  color: #2F2923;
+  font-weight: 600;
+}
+
+.p-status-unlocked {
+  color: #C88732;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.p-dispatch-track {
+  width: 100%;
+  height: 3px;
+  background: rgba(47, 41, 35, 0.1);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.p-dispatch-fill {
+  height: 100%;
+  background: #C88732;
+  box-shadow: 0 0 10px rgba(200, 135, 50, 0.4);
+  border-radius: 999px;
+  transition: width 400ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Volume Privilege Banner (> ₹2,999) */
+.p-bag-privilege-banner {
+  padding: 0.75rem 2rem;
+  background: #EFE2C6;
+  border-bottom: 1px solid var(--p-border-hairline);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.775rem;
+  color: #2F2923;
+}
+
+.p-bag-privilege-banner.active {
+  background: #5A1F22;
+  color: #F4E8D2;
+  border-left: 3px solid #C88732;
+}
+
+.p-bag-privilege-banner.active .p-privilege-indicator {
+  color: #C88732;
+}
+
+.p-privilege-indicator {
+  display: flex;
+  align-items: center;
+  color: #111613;
+}
+
+/* Items Scroll Area */
+.p-bag-items-scroll {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1.5rem 2rem;
+}
+
+.p-bag-empty {
+  padding: 4rem 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.p-empty-glyph {
+  color: var(--p-text-muted);
+  margin-bottom: 1.25rem;
+  opacity: 0.6;
+}
+
+.p-empty-title {
+  font-family: var(--p-font-display);
+  font-size: 1.35rem;
+  color: var(--p-color-basalt);
+  margin-bottom: 0.5rem;
+}
+
+.p-empty-sub {
+  font-size: 0.85rem;
+  color: var(--p-text-muted);
+  max-width: 260px;
+  line-height: 1.5;
+}
+
+/* Individual Item Row */
+.p-bag-item {
+  display: flex;
+  gap: 1.25rem;
+  padding-block: 1.25rem;
+  border-bottom: 1px solid var(--p-border-hairline);
+}
+
+.p-bag-item:first-child {
+  padding-top: 0;
+}
+
+.p-item-thumb {
+  width: 72px;
+  height: 92px;
+  border-radius: var(--p-radius-sm);
+  background: var(--p-bg-canvas);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem;
+  flex-shrink: 0;
+  border: 1px solid var(--p-border-hairline);
+}
+
+.p-item-thumb img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.p-item-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.p-item-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.p-item-title {
+  font-family: var(--p-font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--p-color-basalt);
+  margin: 0;
+  line-height: 1.25;
+}
+
+.p-item-price {
+  font-family: var(--p-font-sans);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--p-color-basalt);
+  white-space: nowrap;
+}
+
+.p-item-variant {
+  font-size: 0.75rem;
+  color: var(--p-text-muted);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-top: 0.25rem;
+}
+
+.p-item-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.75rem;
+}
+
+/* Stepper */
+.p-qty-stepper {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--p-border-hairline);
+  border-radius: var(--p-radius-full);
+  background: #FFF;
+  height: 30px;
+}
+
+.p-stepper-btn {
+  background: transparent;
+  border: none;
+  width: 28px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  color: var(--p-color-basalt);
+  cursor: pointer;
+  transition: background 150ms;
+}
+
+.p-stepper-btn:hover {
+  background: var(--p-bg-warm);
+}
+
+.p-stepper-val {
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding-inline: 0.5rem;
+  min-width: 24px;
+  text-align: center;
+}
+
+.p-item-remove {
+  background: transparent;
+  border: none;
+  font-size: 0.725rem;
+  color: var(--p-text-muted);
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 150ms;
+}
+
+.p-item-remove:hover {
+  color: var(--p-color-terracotta);
+}
+
+/* Bag Footer & Ledger */
+.p-bag-footer {
+  padding: 1.5rem 2rem 2rem;
+  background: var(--p-bg-canvas);
+  border-top: 1px solid var(--p-border-hairline);
+}
+
+/* Toggles */
+.p-bag-toggles {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--p-border-hairline);
+}
+
+.p-toggle-row {
+  display: flex;
+  align-items: center;
+  font-size: 0.775rem;
+  color: var(--p-color-basalt);
+  cursor: pointer;
+  user-select: none;
+}
+
+.p-toggle-row input {
+  display: none;
+}
+
+.p-toggle-box {
+  width: 15px;
+  height: 15px;
+  border: 1px solid var(--p-border-medium);
+  border-radius: 3px;
+  margin-right: 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFF;
+  flex-shrink: 0;
+  transition: all 180ms ease;
+}
+
+.p-toggle-row input:checked + .p-toggle-box {
+  background: var(--p-color-basalt);
+  border-color: var(--p-color-basalt);
+}
+
+.p-toggle-row input:checked + .p-toggle-box::after {
+  content: '✓';
+  color: #FFF;
+  font-size: 0.65rem;
+  font-weight: 700;
+}
+
+.p-toggle-label {
+  flex: 1;
+}
+
+.p-toggle-meta {
+  font-weight: 600;
+  font-size: 0.75rem;
+  color: var(--p-text-muted);
+}
+
+/* Promo Code Input */
+.p-bag-coupon-row {
+  margin-bottom: 1.25rem;
+}
+
+.p-coupon-field {
+  display: flex;
+  border: 1px solid var(--p-border-hairline);
+  border-radius: var(--p-radius-full);
+  background: #FFF;
+  overflow: hidden;
+  transition: border-color 200ms;
+}
+
+.p-coupon-field:focus-within {
+  border-color: var(--p-color-basalt);
+}
+
+.p-coupon-field input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 0.65rem 1rem;
+  font-size: 0.775rem;
+  outline: none;
+  color: var(--p-color-basalt);
+  font-family: var(--p-font-sans);
+}
+
+.p-coupon-btn {
+  border: none;
+  background: transparent;
+  color: var(--p-color-basalt);
+  font-weight: 700;
+  font-size: 0.725rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.65rem 1.15rem;
+  cursor: pointer;
+  border-left: 1px solid var(--p-border-hairline);
+  transition: all 180ms;
+}
+
+.p-coupon-btn:hover {
+  background: var(--p-bg-warm);
+}
+
+/* Ledger Breakdown */
+.p-bag-ledger {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.p-ledger-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.825rem;
+  color: var(--p-text-body);
+}
+
+.p-badge-complimentary {
+  color: #111613;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 0.725rem;
+}
+
+.p-ledger-total {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--p-color-basalt);
+  padding-top: 0.6rem;
+  border-top: 1px solid var(--p-border-hairline);
+}
+
+.p-total-val {
+  font-family: var(--p-font-display);
+  font-size: 1.25rem;
+}
+
+.p-tax-note {
+  font-size: 0.675rem;
+  color: var(--p-text-muted);
+  line-height: 1.4;
+  margin-top: 0.2rem;
+}
+
+/* Primary Checkout CTA */
+.p-checkout-cta {
+  width: 100%;
+  background: #7A2E25;
+  color: #F4E8D2 !important;
+  text-decoration: none;
+  border-radius: var(--p-radius-full);
+  padding: 1.15rem 1.5rem;
+  font-family: var(--p-font-sans);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  box-shadow: 0 6px 20px rgba(122, 46, 37, 0.3);
+  transition: all 250ms cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.p-checkout-cta:hover {
+  background: #5A1F22 !important;
+  color: #F4E8D2 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(90, 31, 34, 0.4);
+}

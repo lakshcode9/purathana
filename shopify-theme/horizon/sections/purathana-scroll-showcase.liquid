@@ -1,0 +1,562 @@
+<!-- ===================================================================
+     PURATHANA SCROLL SHOWCASE (Visual Purity Showcase)
+     Cinematic Aperture Lens · Dynamic Glare Sweep · Kinetic Progression
+     Smooth, Non-Blocking, 100% Fluid Scrolling · Zero Jitter
+     =================================================================== -->
+
+<section class="p-scroll-section" id="scroll-showcase">
+  <!-- Background Ambient Glow -->
+  <div class="p-scroll-ambient-glow"></div>
+
+  <div class="p-scroll-showcase-container">
+    
+    <!-- Top Eyebrow Badge -->
+    <div class="p-scroll-top-badge">
+      <span class="p-scroll-dot"></span>
+      <span>The Living Extraction Process</span>
+    </div>
+
+    <!-- Center Stage: The Lens + Sweep Glare Frame -->
+    <div class="p-scroll-lens-wrapper">
+      <div class="p-scroll-lens" id="pScrollLens">
+        <!-- Background Graphic / Collection Showcase -->
+        <div class="p-scroll-lens-inner">
+          <img src="{{ 'purathana-collection-banner.png' | asset_url }}" 
+               alt="Purathana Cold Pressed Reserve Collection" 
+               class="p-scroll-lens-img" 
+               id="pScrollLensImg" />
+          
+          <!-- Heritage Village Stamp Inset -->
+          <div class="p-scroll-village-stamp">
+            <img src="{{ 'village-heritage-gold.png' | asset_url }}" alt="Village Heritage" />
+          </div>
+        </div>
+
+        <!-- Dynamic Glare Sweep Bands (Larevoltosa Mechanics) -->
+        <div class="p-scroll-glare-overlay">
+          <div class="p-scroll-glare-band band-1" id="pGlareBand1"></div>
+          <div class="p-scroll-glare-band band-2" id="pGlareBand2"></div>
+        </div>
+
+        <!-- Concentric Golden Aperture Rings -->
+        <div class="p-scroll-lens-ring ring-outer"></div>
+        <div class="p-scroll-lens-ring ring-inner"></div>
+      </div>
+    </div>
+
+    <!-- Kinetic Typography HUD (Auto-Cycling + Clickable Tabs) -->
+    <div class="p-scroll-hud">
+      <div class="p-scroll-slide active" data-step="0">
+        <span class="p-hud-eyebrow">STEP 01 / CRAFT</span>
+        <h2 class="p-hud-title">ANCIENT VAAGAI WOOD.</h2>
+        <p class="p-hud-caption">14 RPM botanical mortar naturally absorbs friction heat.</p>
+      </div>
+
+      <div class="p-scroll-slide" data-step="1">
+        <span class="p-hud-eyebrow">STEP 02 / THERMAL THRESHOLD</span>
+        <h2 class="p-hud-title">SLOW CRUSHED BELOW 38°C.</h2>
+        <p class="p-hud-caption">Body-temperature extraction. Living lipid enzymes stay intact.</p>
+      </div>
+
+      <div class="p-scroll-slide" data-step="2">
+        <span class="p-hud-eyebrow">STEP 03 / CHEMICAL PURITY</span>
+        <h2 class="p-hud-title">0.00 PPM CHEMICALS.</h2>
+        <p class="p-hud-caption">Zero hexane bath. Zero synthetic TBHQ. Pure mechanical press.</p>
+      </div>
+
+      <div class="p-scroll-slide" data-step="3">
+        <span class="p-hud-eyebrow">STEP 04 / FRESHNESS PROMISE</span>
+        <h2 class="p-hud-title">FRESH WEEKLY RESERVES.</h2>
+        <p class="p-hud-caption">Crushed in small batches. Zero aged warehouse inventory stored.</p>
+      </div>
+    </div>
+
+    <!-- Telemetry Navigation Badges (Interactive Steps) -->
+    <div class="p-scroll-telemetry">
+      <button type="button" class="p-telemetry-pill active" onclick="window.selectShowcaseStep(0)">
+        <span class="p-pill-num">01</span>
+        <span class="p-pill-text">Vaagai Wood</span>
+      </button>
+      <button type="button" class="p-telemetry-pill" onclick="window.selectShowcaseStep(1)">
+        <span class="p-pill-num">02</span>
+        <span class="p-pill-text">&lt; 38°C Cold</span>
+      </button>
+      <button type="button" class="p-telemetry-pill" onclick="window.selectShowcaseStep(2)">
+        <span class="p-pill-num">03</span>
+        <span class="p-pill-text">Zero Hexane</span>
+      </button>
+      <button type="button" class="p-telemetry-pill" onclick="window.selectShowcaseStep(3)">
+        <span class="p-pill-num">04</span>
+        <span class="p-pill-text">Fresh Weekly</span>
+      </button>
+    </div>
+
+    <!-- Scroll & Transition Progress Track -->
+    <div class="p-scroll-progress-track">
+      <div class="p-scroll-progress-fill" id="pScrollProgressFill"></div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+/* ===================================================================
+   PURATHANA CINEMATIC APERTURE SHOWCASE STYLES
+   Fluid, Non-Blocking, GPU-Accelerated Layout · Zero Scroll Trapping
+   =================================================================== */
+.p-scroll-section {
+  position: relative;
+  background-color: #241E1A;
+  color: #F4E8D2;
+  padding: 5.5rem 1.5rem 4.5rem;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.p-scroll-ambient-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60vw;
+  height: 60vw;
+  max-width: 600px;
+  max-height: 600px;
+  background: radial-gradient(circle, rgba(200, 135, 50, 0.18) 0%, rgba(90, 31, 34, 0.15) 50%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(40px);
+}
+
+.p-scroll-showcase-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1040px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.85rem;
+  box-sizing: border-box;
+}
+
+/* Top Eyebrow */
+.p-scroll-top-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: rgba(244, 232, 210, 0.08);
+  border: 1px solid rgba(200, 135, 50, 0.35);
+  padding: 0.45rem 1.25rem;
+  border-radius: 9999px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #C88732;
+  font-weight: 700;
+  backdrop-filter: blur(8px);
+}
+
+.p-scroll-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #C88732;
+  box-shadow: 0 0 10px #C88732;
+  animation: pDotPulse 2s infinite ease-in-out;
+}
+
+@keyframes pDotPulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.4); opacity: 0.5; }
+}
+
+/* Central Aperture Lens */
+.p-scroll-lens-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 580px;
+  aspect-ratio: 16 / 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.p-scroll-lens {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6),
+              0 0 40px rgba(200, 135, 50, 0.2);
+  border: 1px solid rgba(200, 135, 50, 0.4);
+  background: #1A1512;
+  transform-origin: center center;
+  will-change: transform;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.p-scroll-lens-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.p-scroll-lens-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1.04);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.p-scroll-village-stamp {
+  position: absolute;
+  top: 1rem;
+  right: 1.25rem;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(36, 30, 26, 0.85);
+  border: 1px solid rgba(200, 135, 50, 0.5);
+  padding: 6px;
+  backdrop-filter: blur(6px);
+}
+
+.p-scroll-village-stamp img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Glare Bands */
+.p-scroll-glare-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.p-scroll-glare-band {
+  position: absolute;
+  top: -50%;
+  width: 35%;
+  height: 200%;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(255, 255, 255, 0.15) 35%, 
+    rgba(255, 255, 255, 0.65) 50%, 
+    rgba(200, 135, 50, 0.3) 65%, 
+    transparent 100%
+  );
+  transform: rotate(25deg);
+  will-change: transform;
+}
+
+.p-scroll-glare-band.band-1 {
+  left: -50%;
+}
+
+.p-scroll-glare-band.band-2 {
+  left: -80%;
+}
+
+/* Concentric Lens Rings */
+.p-scroll-lens-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  pointer-events: none;
+}
+
+.p-scroll-lens-ring.ring-outer {
+  border: 1px solid rgba(244, 232, 210, 0.15);
+  margin: 6px;
+}
+
+.p-scroll-lens-ring.ring-inner {
+  border: 1px dashed rgba(200, 135, 50, 0.35);
+  margin: 12px;
+}
+
+/* Kinetic Typography HUD */
+.p-scroll-hud {
+  position: relative;
+  width: 100%;
+  max-width: 680px;
+  text-align: center;
+  min-height: 105px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.p-scroll-slide {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(14px) scale(0.98);
+  pointer-events: none;
+  transition: opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.p-scroll-slide.active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.p-hud-eyebrow {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.6875rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #C88732;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+
+.p-hud-title {
+  font-family: 'Marcellus', Georgia, serif;
+  font-size: clamp(1.8rem, 3.8vw, 2.6rem);
+  font-weight: 400;
+  color: #F4E8D2;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.35rem;
+  text-shadow: 0 2px 14px rgba(0,0,0,0.5);
+}
+
+.p-hud-caption {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(0.85rem, 1.6vw, 1.05rem);
+  color: rgba(244, 232, 210, 0.78);
+  margin: 0;
+  max-width: 520px;
+}
+
+/* Bottom Telemetry Navigation */
+.p-scroll-telemetry {
+  display: flex;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 650px;
+}
+
+.p-telemetry-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(244, 232, 210, 0.05);
+  border: 1px solid rgba(244, 232, 210, 0.15);
+  padding: 0.5rem 1.15rem;
+  border-radius: 9999px;
+  color: rgba(244, 232, 210, 0.7);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.775rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.p-telemetry-pill:hover {
+  background: rgba(200, 135, 50, 0.15);
+  border-color: #C88732;
+  color: #F4E8D2;
+}
+
+.p-telemetry-pill.active {
+  background: #7A2E25;
+  border-color: #C88732;
+  color: #F4E8D2;
+  box-shadow: 0 0 16px rgba(200, 135, 50, 0.3);
+}
+
+.p-pill-num {
+  font-size: 0.65rem;
+  opacity: 0.7;
+}
+
+/* Track at very bottom of section */
+.p-scroll-progress-track {
+  width: 100%;
+  max-width: 320px;
+  height: 3px;
+  background: rgba(244, 232, 210, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+.p-scroll-progress-fill {
+  width: 25%;
+  height: 100%;
+  background: linear-gradient(90deg, #7A2E25, #C88732);
+  transition: width 0.4s ease;
+}
+
+@media (max-width: 768px) {
+  .p-scroll-section {
+    padding: 3.5rem 1rem 3rem !important;
+  }
+  .p-scroll-showcase-container {
+    gap: 1.35rem !important;
+  }
+  .p-scroll-top-badge {
+    font-size: 0.65rem !important;
+    padding: 0.3rem 0.85rem !important;
+  }
+  .p-scroll-lens-wrapper {
+    max-width: 94%;
+    aspect-ratio: 16 / 10;
+    max-height: 220px;
+  }
+  .p-hud-title {
+    font-size: 1.55rem !important;
+  }
+  .p-hud-caption {
+    font-size: 0.85rem !important;
+  }
+  .p-scroll-telemetry {
+    gap: 0.35rem;
+  }
+  .p-telemetry-pill {
+    padding: 0.35rem 0.65rem;
+    font-size: 0.6875rem;
+  }
+}
+</style>
+
+<script>
+(function() {
+  const section = document.getElementById('scroll-showcase');
+  const lens = document.getElementById('pScrollLens');
+  const band1 = document.getElementById('pGlareBand1');
+  const band2 = document.getElementById('pGlareBand2');
+  const progressFill = document.getElementById('pScrollProgressFill');
+  const slides = document.querySelectorAll('.p-scroll-slide');
+  const pills = document.querySelectorAll('.p-telemetry-pill');
+
+  if (!section) return;
+
+  let currentStep = 0;
+  let autoTimer = null;
+  const totalSteps = slides.length || 4;
+
+  function triggerGlareSweep() {
+    if (!band1 || !band2) return;
+    band1.style.transition = 'none';
+    band2.style.transition = 'none';
+    band1.style.transform = 'translateX(0%) rotate(25deg)';
+    band2.style.transform = 'translateX(0%) rotate(25deg)';
+    
+    requestAnimationFrame(function() {
+      band1.style.transition = 'transform 0.85s cubic-bezier(0.16, 1, 0.3, 1)';
+      band2.style.transition = 'transform 0.85s cubic-bezier(0.16, 1, 0.3, 1)';
+      band1.style.transform = 'translateX(450%) rotate(25deg)';
+      band2.style.transform = 'translateX(450%) rotate(25deg)';
+    });
+  }
+
+  function goToStep(idx) {
+    currentStep = (idx + totalSteps) % totalSteps;
+
+    slides.forEach(function(slide, sIdx) {
+      if (sIdx === currentStep) {
+        slide.classList.add('active');
+      } else {
+        slide.classList.remove('active');
+      }
+    });
+
+    pills.forEach(function(pill, pIdx) {
+      if (pIdx === currentStep) {
+        pill.classList.add('active');
+      } else {
+        pill.classList.remove('active');
+      }
+    });
+
+    if (progressFill) {
+      progressFill.style.width = (((currentStep + 1) / totalSteps) * 100) + '%';
+    }
+
+    if (lens) {
+      lens.style.transform = 'scale(1.025)';
+      setTimeout(function() {
+        if (lens) lens.style.transform = 'scale(1)';
+      }, 350);
+    }
+
+    triggerGlareSweep();
+  }
+
+  window.selectShowcaseStep = function(idx) {
+    stopAutoplay();
+    goToStep(idx);
+    startAutoplay();
+  };
+
+  function startAutoplay() {
+    stopAutoplay();
+    autoTimer = setInterval(function() {
+      goToStep(currentStep + 1);
+    }, 4000);
+  }
+
+  function stopAutoplay() {
+    if (autoTimer) {
+      clearInterval(autoTimer);
+      autoTimer = null;
+    }
+  }
+
+  // Pause on hover
+  section.addEventListener('mouseenter', stopAutoplay);
+  section.addEventListener('mouseleave', startAutoplay);
+
+  // IntersectionObserver: only autoplay when visible in viewport
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          startAutoplay();
+          triggerGlareSweep();
+        } else {
+          stopAutoplay();
+        }
+      });
+    }, { threshold: 0.2 });
+
+    observer.observe(section);
+  } else {
+    startAutoplay();
+  }
+
+  // Initial glare sweep
+  setTimeout(triggerGlareSweep, 600);
+})();
+</script>
+
+{% schema %}
+{
+  "name": "Purathana Scroll Showcase",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Purathana Scroll Showcase"
+    }
+  ]
+}
+{% endschema %}

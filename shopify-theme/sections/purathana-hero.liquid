@@ -1,0 +1,78 @@
+<!-- ===================================================================
+     PURATHANA HERO: EDITORIAL LUXURY SPOTLIGHT
+     Apple-grade minimalist reveal for Cold Pressed Oils
+     =================================================================== -->
+
+<section class="p-hero" id="hero">
+  <!-- 100% Fully Visible Cinematic Village & Product Lineup Background -->
+  <div class="p-hero-bg-backdrop">
+    <img src="{{ 'purathana-hero-bg.jpg' | asset_url }}" 
+         alt="Purathana Traditional Village Heritage Landscape and Cold Pressed Oil Bottles" 
+         class="p-hero-bg-visual" 
+         loading="eager" />
+  </div>
+
+  <div class="purathana-container" style="position: relative; z-index: 2;">
+    <div class="p-hero-grid">
+      <!-- Left Editorial Column: Written directly over the golden sunrise with high contrast -->
+      <div class="p-hero-copy">
+        <div class="p-eyebrow">Fresh Small-Batch Milled · Zero Old Stock</div>
+        
+        <h1 class="p-hero-headline">
+          Traditional Cold-Pressed <br /><em>Living Oil</em>.
+        </h1>
+
+        <p class="p-hero-lead">
+          Slow-crushed below 38°C in traditional Vaagai wood mortars. Milled in fresh small batches on demand — zero old inventory kept in storage.
+        </p>
+
+        <div class="p-specs-row">
+          <div class="p-spec-item">
+            <span class="p-spec-val">&lt; 38°C</span>
+            <span class="p-spec-label">Crush Temp</span>
+          </div>
+          <div class="p-spec-item">
+            <span class="p-spec-val">Small Batch</span>
+            <span class="p-spec-label">Fresh Milled</span>
+          </div>
+          <div class="p-spec-item">
+            <span class="p-spec-val">0 Old Stock</span>
+            <span class="p-spec-label">Never Stored</span>
+          </div>
+          <div class="p-spec-item">
+            <span class="p-spec-val">0.00 PPM</span>
+            <span class="p-spec-label">Solvents</span>
+          </div>
+        </div>
+
+        <div class="p-btn-row">
+          <a href="#catalog" class="p-btn-luxe">
+            <span>Shop Fresh Pressed Oils</span>
+            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <a href="#process" class="p-btn-ghost">
+            <span>Why Wood Pressed</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Column: Unobstructed so the 5 bottles in the background are 100% visible -->
+      <div class="p-hero-stage p-hero-stage-open" aria-hidden="true"></div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Purathana Hero Luxury",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Purathana Hero Luxury"
+    }
+  ]
+}
+{% endschema %}

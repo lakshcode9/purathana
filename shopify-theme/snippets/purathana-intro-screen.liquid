@@ -1,0 +1,183 @@
+{% comment %}
+  PURATHANA - CINEMATIC BRAND REVEAL SCREEN
+  Philosophy: Ultra-Luxury Editorial Prelude (Apple / The Row / A24 Grade)
+  Obsidian curtain, expanding typographic kerning, seamless slide wipe.
+{% endcomment %}
+
+{% unless request.design_mode %}
+<div class="p-intro-curtain" id="PurathanaIntroCurtain" aria-hidden="true">
+  <div class="p-intro-content">
+    <div class="p-intro-logo-wrap">
+      <div class="p-intro-village-emblem">
+        <img src="{{ 'village-heritage-gold.png' | asset_url }}" alt="Purathana Heritage Village" class="p-intro-village-img" width="180" height="180" />
+      </div>
+      <span class="p-intro-wordmark">PURATHANA</span>
+      <div class="p-intro-hairline"></div>
+      <span class="p-intro-subtitle">TRADITIONAL COLD PRESSED OILS</span>
+    </div>
+  </div>
+</div>
+
+<style>
+/* ===================================================================
+   CINEMATIC INTRO SCREEN STYLES
+   =================================================================== */
+.p-intro-curtain {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  background-color: #FAF5EB;
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  will-change: transform, opacity;
+  transition: transform 900ms cubic-bezier(0.85, 0, 0.15, 1),
+              opacity 900ms cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.p-intro-content {
+  text-align: center;
+  user-select: none;
+}
+
+.p-intro-logo-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.p-intro-village-emblem {
+  width: clamp(120px, 22vw, 190px);
+  height: auto;
+  margin-bottom: 1.25rem;
+  opacity: 0;
+  transform: translateY(14px) scale(0.92);
+  animation: pIntroVillageIn 1000ms cubic-bezier(0.16, 1, 0.3, 1) 100ms forwards;
+  filter: drop-shadow(0 6px 20px rgba(40, 66, 45, 0.18));
+}
+
+.p-intro-village-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+@keyframes pIntroVillageIn {
+  0% {
+    opacity: 0;
+    transform: translateY(16px) scale(0.90);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.p-intro-wordmark {
+  font-family: 'Marcellus', Georgia, serif;
+  font-size: clamp(2.4rem, 6vw, 4.25rem);
+  font-weight: 400;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: #28422D;
+  line-height: 1;
+  opacity: 0;
+  transform: translateY(14px) scale(0.98);
+  animation: pIntroLogoIn 1000ms cubic-bezier(0.16, 1, 0.3, 1) 200ms forwards;
+}
+
+.p-intro-hairline {
+  width: 0;
+  height: 2px;
+  background-color: #C88E35;
+  box-shadow: 0 0 12px rgba(200, 142, 53, 0.5);
+  margin: 1.25rem 0 1rem;
+  animation: pIntroLineIn 800ms cubic-bezier(0.16, 1, 0.3, 1) 500ms forwards;
+}
+
+.p-intro-subtitle {
+  font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+  font-size: 0.6875rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #28422D;
+  opacity: 0;
+  transform: translateY(8px);
+  animation: pIntroSubIn 800ms cubic-bezier(0.16, 1, 0.3, 1) 650ms forwards;
+}
+
+@keyframes pIntroLogoIn {
+  0% {
+    opacity: 0;
+    transform: translateY(14px) scale(0.98);
+    letter-spacing: 0.18em;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    letter-spacing: 0.32em;
+  }
+}
+
+@keyframes pIntroLineIn {
+  0% { width: 0; opacity: 0; }
+  100% { width: 48px; opacity: 1; }
+}
+
+@keyframes pIntroSubIn {
+  0% { opacity: 0; transform: translateY(8px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Exit Transition States */
+.p-intro-curtain.p-curtain-exit {
+  transform: translateY(-100%);
+  pointer-events: none;
+}
+
+.p-intro-curtain.p-curtain-dismissed {
+  display: none !important;
+}
+</style>
+
+<script>
+(function() {
+  const curtain = document.getElementById('PurathanaIntroCurtain');
+  if (!curtain) return;
+
+  // Prevent scroll during intro reveal
+  const originalOverflow = document.body.style.overflow;
+  document.body.style.overflow = 'hidden';
+
+  function dismissCurtain() {
+    if (!curtain || curtain.classList.contains('p-curtain-exit')) return;
+    
+    curtain.classList.add('p-curtain-exit');
+    document.body.style.overflow = originalOverflow;
+
+    setTimeout(function() {
+      curtain.classList.add('p-curtain-dismissed');
+      if (curtain.parentNode) {
+        curtain.parentNode.removeChild(curtain);
+      }
+    }, 950);
+  }
+
+  // Auto-dismiss after 1.85 seconds
+  const timer = setTimeout(dismissCurtain, 1850);
+
+  // Allow clicking anywhere to skip immediately
+  curtain.addEventListener('click', function() {
+    clearTimeout(timer);
+    dismissCurtain();
+  });
+})();
+</script>
+{% endunless %}
